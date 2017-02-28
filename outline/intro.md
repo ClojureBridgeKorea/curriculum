@@ -13,20 +13,20 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 {% endcomment %}
 
 <section>
-Introduction to Programming with Clojure
+클로저로 프로그래밍 하기
 ----------------------------------------
 {: .slide-title .chapter}
 
-* Why Clojure?
-* What is Clojure good at?
-* What does Clojure look like?
-    - Comments
-* What is a REPL?
+* 왜 클로저인가?
+* 클로저로 하기 좋은 것
+* 클로저의 생김새
+    - 주석
+* REPL이 뭘까?
 * REPL in action
 </section>
 
 <section ng-controller="NarrativeController">
-## Why Clojure?
+## 왜 클로저인가?
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block11" ng-click="block11=!block11">Intro</button>
@@ -71,7 +71,7 @@ Introduction to Programming with Clojure
 </section>
 
 <section ng-controller="NarrativeController">
-## What is Clojure good at?
+## 클로저로 하기 좋은 것
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block21" ng-click="block21=!block21">Intro</button>
@@ -109,7 +109,7 @@ Introduction to Programming with Clojure
 </section>
 
 <section ng-controller="NarrativeController">
-## What does Clojure look like?
+## 클로저의 생김새
 {: .slide_title .slide}
 
 ```clojure
@@ -181,7 +181,7 @@ Introduction to Programming with Clojure
 </section>
 
 <section>
-## What is a REPL?
+## REPL이 뭘까?
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block51" ng-click="block51=!block51">Intro</button>
