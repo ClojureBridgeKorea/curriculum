@@ -15,36 +15,42 @@ http://clojurebridge.github.io/curriculum/outline/sequences.html
 <section>
 [BONUS]
 
-Sequences
+시퀀스
 -------------------------
 {: .slide-title .chapter}
 
-* What are sequences
-* Functions for sequences
+* 시퀀스란?
+* 시퀀스를 다루는 함수들
     * `doseq`
     * `dotimes`
 </section>
 
 <section ng-controller="NarrativeController">
-### What are sequences?
+### 시퀀스가 뭔가요?
 {: .slide_title .slide}
 
-#### Clojure's data structures <button class="link" ng-bind-html="details" ng-model="block11" ng-click="block11=!block11"></button>
+#### Clojure의 자료구조 <button class="link" ng-bind-html="details" ng-model="block11" ng-click="block11=!block11"></button>
 
 > In Clojure, we can say every data structure is a sequence.
+> Clojure에서는, 모든 자료구조를 시퀀스로 할 수 있습니다.
 > So far, we learned `vector` and `map`, both of which are sequence.
+> 앞전에, `벡터`와 `맵`이 전부 시퀀스라고 배웠습니다.
 > String is also a sequence. When something is **seq-able**, it is a sequence.
+> 문자열도 역시 시퀀스이며, **seq로 다룰 수 있는 것**들은 전부 시퀀스입니다.
 {: ng-show="block11" .description}
 
 #### `first` item or not <button class="link" ng-bind-html="details" ng-model="block12" ng-click="block12=!block12"></button>
 
 > If something is **seq-able**, it returns the first item in the sequence
+> **seq로 다룰 수 있는 것**이라면, 시퀀스의 첫 번째 아이템을 반환합니다.
 > by the `first` function. This is a good test whether it is a sequence or not.
+> `first` 함수를 통해서 말이죠. 시퀀스인지 아닌지 테스트할 때 쓸만합니다.
 {: ng-show="block12" .description}
 </section>
 
 <section ng-controller="NarrativeController">
 #### Results of `first`
+#### `first`의 결과
 
 ```clojure
 (turtle-names)
@@ -68,6 +74,7 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 
 <section ng-controller="NarrativeController">
 ### Functions for sequences
+### 시퀀스를 다루는 함수들
 <button class="link" ng-bind-html="details" ng-model="block21" ng-click="block21=!block21"></button>
 
 > Clojure is very good at *iterate* over a sequence.
