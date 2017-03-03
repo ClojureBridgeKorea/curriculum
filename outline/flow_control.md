@@ -13,35 +13,27 @@ http://clojurebridge.github.io/curriculum/outline/flow_control.html
 {% endcomment %}
 
 <section>
-Flow Control
+흐름 제어
 -------------------------
 {: .slide-title .chapter}
 
 * `if`
 * `cond`
-* Boolean logic
+* 불 연산
 </section>
 
 <section ng-controller="NarrativeController">
-### What is flow control?
+### 흐름제어란?
 {: .slide_title .slide}
 
-#### Decisions how to react <button class="link" ng-bind-html="details" ng-model="block11" ng-click="block11=!block11"></button>
+#### 어떻게 반응할지 결정하기 <button class="link" ng-bind-html="details" ng-model="block11" ng-click="block11=!block11"></button>
 
-> "Flow control" is the programming term for deciding how to react to
-> a given circumstance. We make decisions like this all the time. *If*
-> it's a nice day out, *then* we should visit the park; *otherwise* we
-> should stay inside and play board games. *If* your car's tank is
-> empty, *then* you should visit a gas station; *otherwise* you should
-> continue to your destination.
+> "흐름제어"는 주어진 상황에서 어떻게 반응할지를 결정하는 프로그래밍 용어입니다. 우리는 항상 결정을 내립니다. *만약* 날씨가 좋다*면*  공원에 가자;*그렇지 않다면* 실내에서 보드게임을 하자. *만약* 연료가 다 떨어진다*면* 주유소에 가자;*그렇지 않다면* 계속 목적지를 향해 가자.
 {: ng-show="block11" .description}
 
-#### Testing conditions to react <button class="link" ng-bind-html="details" ng-model="block12" ng-click="block12=!block12"></button>
+#### 반응하기 위해 조건 평가하기 <button class="link" ng-bind-html="details" ng-model="block12" ng-click="block12=!block12"></button>
 
-> Software is also full of these decisions. *If* the user's input is
-> valid, *then* we should save her data; *otherwise* we show an error
-> message. The common pattern here is that you test some condition and
-> react differently based on whether the condition is *true* or *false*.
+> 소프트웨어 역시 이러한 결정들로 가득 차있습다. *만약* 사용자의 입력이 유효하다*면* 그 데이터를 저장해야 한다;*그렇지 않다면* 에러메세지를 보여준다. 여기에 공통된 패턴은 조건을 테스트하고 그 조건이 *참*인지 *거짓*인지에 기반하여 다른 반응을 보인다는 것입니다.
 {: ng-show="block12" .description}
 </section>
 
@@ -53,16 +45,14 @@ Flow Control
 ng-click="block21=!block21"></button>
 <button class="link" ng-bind-html="details2" ng-model="block22" ng-click="block22=!block22"></button>
 
-> In Clojure, the most basic tool we have for the flow control is the `if`
-> operator. Here's the example how you might code the data validation scenario.
+> 클로저에서 흐름제어를 하기 위한 가장 기본적인 방법이 `if`연산자입니다.
+> 다음은 데이터의 유효성을 검증하는 코드의 예제입니다.
 {: ng-show="block21" .description}
 
-> Here' an example. If adding 40 to `y` is still less than 150, then
-> return `(+ y 40)`; otherwise, returns -150. (As for turtle app's
-> frame, the top has 150 in y, while the bottom has -150 in y.)
+> 만약 `y`에 40을 더한 값이 여전히 150 미만이라면 `(+ y 40)을 리턴하고 그렇지 않다면 -150을 리턴하라. (거북이 앱의 프레임에서 y축은 위로는 150, 아래로는 -150을 가집니다.) 
 {: ng-show="block22" .description}
 
-> Reference: [Conditional `if`](http://clojurebridge.github.io/community-docs/docs/clojure/if/)
+> 참조: [Conditional `if`](http://clojurebridge.github.io/community-docs/docs/clojure/if/)
 {: ng-show="block22" .description}
 
 ```clojure
@@ -73,7 +63,7 @@ ng-click="block21=!block21"></button>
 </section>
 
 <section ng-controller="NarrativeController">
-#### General form of `if` operator
+#### `if` 연산자의 일반적인 형태
 
 ```clojure
 (if conditional-expression
@@ -83,7 +73,7 @@ ng-click="block21=!block21"></button>
 </section>
 
 <section ng-controller="NarrativeController">
-#### `if` examples
+#### `if` 예제
 
 ```clojure
 (if (> 3 1)
@@ -101,12 +91,11 @@ ng-click="block21=!block21"></button>
 <section ng-controller="NarrativeController">
 #### Truthiness <button class="link" ng-bind-html="details" ng-model="block51" ng-click="block51=!block51"></button>
 
-> When testing the truth of an expression, Clojure considers the
-> values `nil` and `false` to be false and everything else to be true.
-> Here are some examples:
+> 조건문의 참거짓을 판단할 때, 클로저는 `nil`과 `false`를 거짓으로 생각하고 그밖의 모든 것을 참으로 판단합니다.
+> 다음예제를 확인하세요:
 {: ng-show="block51" .description}
 
-> Reference: [Truthiness](http://clojurebridge.github.io/community-docs/docs/clojure/truthiness/)
+> 참조: [Truthiness](http://clojurebridge.github.io/community-docs/docs/clojure/truthiness/)
 {: ng-show="block51" .description}
 
 
@@ -132,9 +121,9 @@ ng-click="block21=!block21"></button>
 #### EXERCISE 1: Y value within a frame
 {: .slide_title .slide}
 
-* Write a function `y-within-frame` that takes y (vertical position) as an argument.
-* You may use if example in the slide.
-* The function should return the y value that won't exceed 150.
+* y(세로좌표)를 인자로 가지는 `y-within-frame`함수를 만드세요.
+* 슬라이드의 예제를 사용하세요.
+* `y-within-frame`함수는 150을 넘지않는다면 y값을 리턴해야 합니다.
 
     - See: [x and y in absolute values](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md#x-and-y-in-absolute-values)
 
@@ -159,21 +148,17 @@ ng-click="block21=!block21"></button>
 <button class="link" ng-bind-html="details1" ng-model="block61" ng-click="block61=!block61"></button>
 <button class="link" ng-bind-html="details2" ng-model="block62" ng-click="block62=!block62"></button>
 
-> The `if` operator takes only one predicate.
-> When we want to use multiple predicates, `if` is not a good option.
-> We have to write nested, nested, ... and nested `if` conditions.
-> To branch to multiple situations, `cond` operator works well.
+> `if`연산자는 한개의 조건만을 가집니다.
+> 다수의 조건을 사용하고 싶을 때, `if`는 좋은 선택이 아닙니다.
+> 이 경우에는 아주 많이 중첩된 `if`문을 사용해야 합니다.
+> 다수의 상황들을 묶기 위해서는 `cond` 연산자가 적합합니다.
 {: ng-show="block61" .description}
 
-> Here's the example. If adding 40 to y exceeds 150, evaluate the
-> first form. In this case, it returns -150. If adding 40 to y is less
-> than -150, evaluate the second form. In this case, it returns 150.
-> If both two predicates return false, evaluate the `:else` form. In
-> this case, it returns y plus 40. If we use this function in the
-> turtle app, we can keep our turtle between top and bottom of the frame.
+> 예제를 봅시다. 만약 y에 40을 더한 값이 150을 초과할 경우 첫번째 형태를 계산하세요. 이 경우에는 -150을 리턴합니다. 만약 y에 40을 더한 값이 -150 미만일 경우에는 두번째 형태를 계산하세요. 이 경우에는 150을 리턴합니다. 만약 두 조건 모두 거짓일 경우, `:else`를 계산하세요. 이 경우에는 y에 40을 더한 값을 리턴합니다. 만약 이 함수를 거북이 앱에서 사용할 경우 우리는 거북이를 프레임의 세로축내에서만 있도록 할 수 있습니다.
+
 {: ng-show="block62" .description}
 
-> Reference: [Conditional `cond`](http://clojurebridge.github.io/community-docs/docs/clojure/cond/)
+> 참조: [Conditional `cond`](http://clojurebridge.github.io/community-docs/docs/clojure/cond/)
 {: ng-show="block62" .description}
 
 ```clojure
@@ -185,7 +170,7 @@ ng-click="block21=!block21"></button>
 </section>
 
 <section ng-controller="NarrativeController">
-#### General form of `cond` operator
+#### `cond` 연산자의 일반적인 형태
 
 ```clojure
 (cond
@@ -200,17 +185,13 @@ ng-click="block21=!block21"></button>
 #### EXERCISE 2: Y value within a frame - part 2
 {: .slide_title .slide}
 
-> The function we wrote in the previous exercise, `y-within-frame`, has
-> a flaw. If the given y value is -1000, the function will return -960.
-> Since y value of the frame bottom is -150, -960 is beyond that.
-> Your turtle will go invisible area. Let's make it real within-frame
-> function using `cond`.
+> 앞의 excercise에서 작성한 `y-within-frame`함수에는 문제가 있습니다. 만약 주어진 y값이 -1000일경우 함수는 -960을 리턴합니다. 프레임에서 가장 아래의 y값은 -150이므로 -960은 이를 넘습니다. 거북이는 보이지 않는 영역으로 가게 될 것입니다. 거북이를 실제 프레임 내에서만 있게하도록 `cond`를 사용해 봅시다.
 
-* Write a function `y-within-frame-cond` that takes y (vertical position) as an argument.
-* You may use `cond` example in the slide.
-* The function should return the y value between -150 and 150.
+* y(세로좌표)를 인자로 갖는 `y-witin-frame-cond`함수를 만듭시다.
+* 슬라이드의 `cond`예제를 사용하세요.
+* 함수는 -150과 150사이의 값만을 리턴해야 합니다.
 
-    - See: [x and y in absolute values](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md#x-and-y-in-absolute-values)
+	- See: [x and y in absolute values](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md#x-and-y-in-absolute-values)
 
 ```clojure
 ;; usage of y-within-frame-cond function
@@ -221,31 +202,22 @@ ng-click="block21=!block21"></button>
 </section>
 
 <section ng-controller="NarrativeController">
-### Boolean logic with `and`, `or`, and `not`
+### `and`, `or`, `not`을 사용한 불연산
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block81" ng-click="block81=!block81">Intro</button>
 
-> `if` statements are not limited to testing only one thing. You can
-> test multiple conditions using boolean logic. _Boolean logic_ refers
-> to combining and changing the results of predicates using `and`,
-> `or`, and `not`.
+> `if`는 오직 한가지만 평가할 수 있다는 한계가 있습니다. 불 연산을 사용한다면 여러개의 조건을 평가할 수 있습니다. __불 연산__은 조건들을 `and`,`or`,`not`을 이용하여 묶어서 값을 평가합니다. 
 {: ng-show="block81" .description}
 
-> If you've never seen this concept in programming before, remember
-> that it follows the common sense way you look at things normally. Is
-> this _and_ that true? Only if both are true. Is this _or_ that true?
-> Yes, if either -- or both! -- are. Is this _not_ true? Yes, if it's
-> false.
+> 이전에 프로그래밍할 때 이 개념을 본 적이 없다면 이것이 당신이 평소에 사물을 바라보는 것과 같은 방식을 따른다는 것을 기억하세요. __and__는 모든게 참일때 참입니다. __or__는 하나--혹은 둘다--가 참일때 참입니다. __not__은 조건이 거짓일때 참입니다.
 {: ng-show="block81" .description}
 </section>
 
 <section ng-controller="NarrativeController">
 ### Truthy and falsey table <button class="link" ng-bind-html="details" ng-model="block91" ng-click="block91=!block91"></button>
 
-> `and`, `or`, and `not` work like other functions (they aren't
-> exactly functions, but work like them), so they are in _prefix
-> notation_, like we've seen with arithmetic.
+> `and`, `or`, `not`은 다른 함수들처럼 행동합니다.(정확히는 함수는 아니지만 함수처럼 행동합니다.) 그렇기 때문에 이것들은 앞서 산술연산에서 본  _prefic 표기법_을 따릅니다.
 {: ng-show="block91" .description}
 
 | x     | y     | (`and` x y) | (`or` x y) | (`not` x) | (`not` y) |
@@ -260,8 +232,8 @@ ng-click="block21=!block21"></button>
 <section ng-controller="NarrativeController">
 #### `and`, `or`, and `not` combination <button class="link" ng-bind-html="details" ng-model="block101" ng-click="block101=!block101"></button>
 
-> `and`, `or`, and `not` can be combined. This can be hard to read.
-> Here's an example:
+> `and`, `or`, `not`은 조합해서 사용할 수 있으며 이 경우에는 읽기 어려울 수 있습니다.
+> 다음 예제를 봅시다:
 {: ng-show="block101" .description}
 
 ```clojure
@@ -277,9 +249,8 @@ ng-click="block21=!block21"></button>
 <section ng-controller="NarrativeController">
 #### [Bonus] `cond`, `and`, `or`, and `not` combination <button class="link" ng-bind-html="details" ng-model="block110" ng-click="block110=!block110"></button>
 
-> We have learned `cond`, `and`, `or`, and `not`. Let's think what function we can write
-> combining those.
-> Here's an example:
+> 지금까지 `cond`,`and`,`or`,`not`을 배웠습니다. 이것들을 조합해서 만들 수 있는 함수는 무엇이 있을 지 생각해봅시다.
+> 다음 예제를 봅시다.
 {: ng-show="block110" .description}
 
 ```clojure
@@ -305,12 +276,11 @@ ng-click="block21=!block21"></button>
 #### EXERCISE 3: [Bonus] Complete `true-or-false?` function
 {: .slide_title .slide}
 
-> `true-or-false?` function in previous slide sees only `:and`
-> operation. Add `:or`, `:not` operation in the function.
+> 앞 슬라이드에 나오는 `true-or-false?`함수는 `:and`만을 사용했습니다. 함수에 `:or`, `:not`연산자를 추가해 봅시다.
 
-* Use `core.clj` of `myproject` and InstaREPL
-* Add `(= op :or)` and `(= op :not)` in `cond`
-* For `:not`, choose either x or y for the argument
+* `myproject`의 `core.clj`와 InstaREPL을 사용하세요.
+* `cond`안에`(= op :or)`과 `(= op :not)`을 추가하세요.
+* `:not`에는 인수에 대해 x와 y중 하나를 택하세요.
 
 ```clojure
 ;; usage of correct? function
@@ -322,12 +292,10 @@ ng-click="block21=!block21"></button>
 
 {% comment %}
 
-:star2: A link below is for a slide only. Go to [README.md](../README.md)
-instead. :star2:
+:star2: 아래의 링크는 슬라이드 전용입니다. 대신[README.md](../README.md)로 가세요 :star2:
 
 {% endcomment %}
 
 <section>
-Return to the <a href="javascript:;" onClick="Reveal.slide(1);">first slide</a>,
-or go to the [curriculum outline](/curriculum/#/1).
+<a href="javascript:;" onClick="Reveal.slide(1);">first slide</a>로 돌아가거나 [curriculum outline](/curriculum/#/1)으로 가세요.
 </section>
