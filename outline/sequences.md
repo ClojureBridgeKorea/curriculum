@@ -73,7 +73,7 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 > 클로저는 시퀀스를 *반복*할 때 아주 좋습니다.
 > 시퀀스를 다루는 많은 함수들이 있습니다.
 > 예를 들어, `doseq`, `dotimes`, `for`, `loop`, `doall`, or `dorun`.
-> `map`과 `reduce` 함수를 이미 "함수를 포함하는 함수" 섹션에서 보았습니다.
+> `map`과 `reduce` 함수를 이미 "함수를 취하는 함수" 섹션에서 보았습니다.
 > 이것들 또한 시퀀스를 다루는 함수 입니다.
 {: ng-show="block21" .description}
 </section>
