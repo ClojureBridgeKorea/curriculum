@@ -48,7 +48,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 > 벡터를 상상하기 위해서는 일정한 크기의 칸으로 나누어진 박스를 상상해 보세요. 각각의 칸은 수를 가지고 있습니다. 각각의 칸에는 데이터들을 넣을 수 있고 번호가 있기 때문에 어디서 그 데이터를 찾아야 할 지 알 수 있습니다.
 {: ng-show="block22" .description}
 
-> 그 숫자는 0부터 시작되한다는 것을 주의하세요. 이상하게 보일 수도 있지만 프로그래밍시에 0부터 계산해야 합니다.
+> 그 숫자는 0부터 시작되한다는 것을 주의하세요. 이상하게 보일 수도 있지만 프로그래밍시에는 0부터 계산해야 합니다.
 {: ng-show="block22" .description}
 
 ![Vector](img/vector.png)
