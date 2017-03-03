@@ -31,9 +31,8 @@ Simple Values
 
 #### <button class="link" ng-model="block71" ng-click="block71=!block71">Intro</button>
 
-> In order to do anything in a programming language, you need to have
-> values to do stuff with. In Clojure, simple values are numbers,
-> strings, booleans, nil and keywords.
+> 프로그래밍언어에서 무언가를 하기 위해서는 값이 필요하다.
+> 클로저에서는 symple value로 number, boolean, nil, keyworld가 있다.
 {: ng-show="block71" .description}
 </section>
 
@@ -43,13 +42,12 @@ Simple Values
 
 #### <button class="link" ng-bind-html="details" ng-model="block21" ng-click="block21=!block21"></button>
 
-> What is a string? A string is just a piece of text. To make a
-> string, you enclose it in quotation marks.
-> Look at the last example. A backslash is how we put a quotation mark
-> inside a string. Do not try using single quotes to make a string.
+> string은 무엇일까? string은 문자열이다. string을 만들기 위해서는
+> " "로 문장을 감싸야 한다.
+> 다음 예제를 보자. 역슬래시는 문자열에서 " "을 어디에 두어야 하는지를 보여준다.
 {: ng-show="block21" .description}
 
-> Reference: [String](http://clojurebridge.github.io/community-docs/docs/clojure/string/)
+> 참조: [String](http://clojurebridge.github.io/community-docs/docs/clojure/string/)
 {: ng-show="block21" .description}
 
 ```clojure
@@ -65,19 +63,19 @@ Simple Values
 
 #### <button class="link" ng-bind-html="details" ng-model="block31" ng-click="block31=!block31"></button>
 
->A boolean is a true or false value, and you type them just like that,
->`true` and `false`. Often in programming, we need to ask a true or
->false question, like "Is this class in the current semester?" or "Is
->this person's birthday today?" When we ask those questions, we get a
->boolean back.
+> boolean은 참값 혹은 거짓값을 가지며 단순하게 `true` `false`로 입력하면 
+> 된다.
+> 프로그래밍에선 종종 "이번학기에 이 수업이 열리나요?"나 "오늘이 생일이니
+> ?"와 같이 참 혹은 거짓을 물어볼 때가 있다.
+> 이때 우리는 boolean값을 얻게 된다.
 {: ng-show="block31" .description}
 
-> There is another value `nil`, which behaves like a boolean in terms
-> of __truthiness__.
-> But, `nil` means no value at all and not a boolean
+> 또다른 값으로는 `nil`이 있는데 이것은 __truthiness__라는 의미로 boolean
+> 처럼 사용한다.
+> 하지만 `nil`은 아무런 가치가 없고 단지 boolean이란 것만 의미한다.
 {: ng-show="block31" .description}
 
-> Reference: [Truthiness](http://clojurebridge.github.io/community-docs/docs/clojure/truthiness/)
+> 참조: [Truthiness](http://clojurebridge.github.io/community-docs/docs/clojure/truthiness/)
 {: ng-show="block31" .description}
 
 
@@ -94,12 +92,13 @@ nil
 
 #### <button class="link" ng-bind-html="details" ng-model="block41" ng-click="block41=!block41"></button>
 
-> Keywords are the strangest of the basic value types. Some computer
-> languages have similar one. However, keywords don’t have a real
-> world analog like numbers, strings, or booleans.
-> You can think of them as a special type of string, one that’s used for
-> labels. They are often used as keys of key-value pair for maps (data
-> structure; will learn later).
+> keyworld는 기본적인 값들중 가장 이상한 것이다. 몇몇 컴퓨터언어에서도  
+> 이와 비슷한 것을 가진다. 하지만 keyworld는 number,string,boolean처럼 
+> real world analog를 가지지 않는다.
+> 우리는 이것을 레이블처럼 사용되는 일종의 특별한 문자열이라고 생각하면 
+> 된다.
+> keyworld는 maps(자료구조;다음에 배울예정)의 key-value pair에서 키값으로
+> 사용된다.
 {: ng-show="block41" .description}
 
 
@@ -115,12 +114,11 @@ nil
 
 #### Integers <button class="link" ng-bind-html="details" ng-model="block81" ng-click="block81=!block81"></button>
 
-> Clojure has several different types of numbers.
+> 클로저는 여러종류의 숫자 타입을 가진다.
 {: ng-show="block81" .description}
 
-> First up are integers. Integers include zero, the positive whole
-> numbers, and the negative whole numbers, and you write them just
-> like we write them normally.
+> 첫번째는 정수타입이다. 정수는 0을 포함한 양수,음수로 구성되어 있으며 
+> 평상시에 쓰는것처럼 쓰면 된다.
 {: ng-show="block81" .description}
 
 ```clojure
@@ -133,8 +131,8 @@ nil
 <section ng-controller="NarrativeController">
 #### Decimal numbers <button class="link" ng-bind-html="details" ng-model="block91" ng-click="block91=!block91"></button>
 
-> Then we have decimal numbers, which are also called floats. They
-> include any numbers that have a decimal point in them.
+> 다음으로는 float라고도 불리는 소수가 있다. 여기에는 소숫점이 있는 모든 
+> 수가 포함된다.
 {: ng-show="block91" .description}
 
 ```clojure
@@ -147,12 +145,12 @@ nil
 <section ng-controller="NarrativeController">
 #### Ratios <button class="link" ng-bind-html="details" ng-model="block101" ng-click="block101=!block101"></button>
 
-> Finally, we have fractions, which are also called ratios. Computers
-> cannot perfectly represent all floats, but ratios are always exact.
-> We write them with a slash, like so:
+> 마지막으로 ratio라고도 불리는 분수가 있다. 컴퓨터는 모든 소수를 완벽하
+> 게 표현하지 못하지만 분수는 가능하다.
+> 분수는 다음과 같이 슬래시를 이용해서 표현한다:
 {: ng-show="block101" .description}
 
-> Note that, just like with pen-and-paper math, the [denominator](http://en.wikipedia.org/wiki/Fraction_%28mathematics%29) of your ratio cannot be equal to `0`.
+> 실제 수학과 마찬가지로 분수의 [분모](http//en.wikipedia.org/wiki/Fraction_%28mathematics%29)는 절대 0이 될 수 없음을 주의해라.
 {: ng-show="block101" .description}
 
 ```clojure
@@ -167,9 +165,9 @@ nil
 
 #### <button class="link" ng-model="block111" ng-click="block111=!block111">Intro</button>
 
-> You can add, subtract, multiply, and divide numbers. In Clojure,
-> arithmetic looks a little different than it does when you write it
-> out with pen and paper. Look at these examples:
+> 우리는 수들을 더하고,빼고,곱하고 나누는 것이 가능하다. 클로저에서는 이
+> 러한 연산이 실제 우리가 종이에 쓰는 방식과는 조금 차이가 있다. 다음 예
+> 제를 보자:  
 {: ng-show="block111" .description}
 
 ```clojure
@@ -187,16 +185,15 @@ nil
 <button class="link" ng-bind-html="details1" ng-model="block121" ng-click="block121=!block121"></button>
 <button class="link" ng-bind-html="details2" ng-model="block122" ng-click="block122=!block122"></button>
 
-> In Clojure, `+`, `-`, `*` and `/` appear before two numbers. This is
-> called _prefix notation_. What you're used to seeing is called
-> _infix notation_, as the arithmetic operator is in-between the two
-> operands.
+> 클로저에서는 `+`,`-`,`*`,`/`가 피연산자들 앞에 위치한다. 이런 것을 _pre
+> fix 표기법_이라고 한다. 우리가 주로 보는 두 피연산자 사이에 연산자가 위
+> 치하는 것은 _infix 표기법_이라고 한다.
 {: ng-show="block121" .description}
 
-> Languages such as **JavaScript** use **infix** notation,
-> while **Clojure** only uses **prefix** notation.
-> Prefix notation is useful for many reasons. Look at this example of
-> an infix expression and the prefix equivalent:
+> **JavaScript**같은 것은 **infix**표기법을 사용한다.
+> **Clojure**에선 **prefix**표기법만을 사용한다.
+> Prefix 표기법은 많은 이유에서 유용하다. 다음 예제는 infix표현과 그와 동
+> 일한 prefix표현을 보여준다:
 {: ng-show="block122" .description}
 
 ```clojure
@@ -211,11 +208,10 @@ Prefix: (+ (- (+ (+ 1 (/ (* 2 3) 4)) 5) (/ (* 6 7) 8)) 9)
 
 #### Explicit precedence <button class="link" ng-bind-html="details" ng-model="block131" ng-click="block131=!block131"></button>
 
-> Imagine both are unclear, but notice that in the prefix version,
-> you do not have to ever think about the precedence of operators.
-> Because each expression has the operator before all the operands and
-> the entire expression is wrapped in parentheses, all precendence is
-> explicit.
+> 명확하게 보이지는 않지만 prefix버전에서 우린 더이상 연산자의 우선순위를
+> 생각 할 필요가 없다는 것에 주목하라. 
+> 모든 표현식이 모든 피연산자 앞에 연산자를 가지며 전체 표현식이 괄호 안
+> 에 싸여있기 때문에 모든 우선순위가 명시적이다.
 {: ng-show="block131" .description}
 
 ```clojure
@@ -225,10 +221,10 @@ Prefix: (+ 1 (/ 2 3))
 
 #### Less repetitive <button class="link" ng-bind-html="details" ng-model="block132" ng-click="block132=!block132"></button>
 
-> Another reason prefix notation can be nice is that it can make long
-> expressions less repetitive.
-> With prefix notation, if we plan to use the same operator on many
-> operands, we do not have to repeat the operator between them.
+> prefix 표기법이 더 좋은 다른 이유는 긴 표현을 덜 반복적으로 만들 수 있
+> 다는 것이다.
+> 만약 다수의 피연산자에 대해 동일한 연산을 하려할 때 prefix표기법에선 연
+> 산자들을 반복해서 쓸 필요가 없다.
 {: ng-show="block132" .description}
 
 ```clojure
@@ -242,9 +238,9 @@ Prefix: (+ 1 2 3 4 5 6 7 8 9)
 
 <button class="link" ng-bind-html="details" ng-model="block141" ng-click="block141=!block141"></button>
 
-> So far, we looked at arithmetic operations by integers only.
-> However, we can use floats or ratios for those operations as well.
-> See these examples:
+> 지금까지 정수에 대해서만 산술연산을 해보았다.
+> 하지만 이러한 연산자들을 소수와 분수에 대해서 사용하기도 한다.
+> 다음 예를 보자:
 {: ng-show="block141" .description}
 
 ```clojure
@@ -260,10 +256,9 @@ Prefix: (+ 1 2 3 4 5 6 7 8 9)
 
 #### <button class="link" ng-model="block161" ng-click="block161=!block161">Intro</button>
 
-> If we had to type the same values over and over, it would be very
-> hard to write a program. What we need are names for values, so we
-> can refer to them in a way we can remember. This is called
-> assignment. 
+> 만약 같은 값을 반복해서 입력해야 한다면 프로그램을 작성하는 것이 매우
+> 어려울 것이다. 그렇기 때문에 값에 대한 이름이 필요하고 우리가 기억할 수
+> 있는 방식으로 그것들을 참조할 수 있다. 이것을 assignmet라고 한다.
 {: ng-show="block161" .description}
 </section>
 
@@ -272,11 +267,11 @@ Prefix: (+ 1 2 3 4 5 6 7 8 9)
 
 #### <button class="link" ng-bind-html="details" ng-model="block171" ng-click="block171=!block171"></button>
 
-> We can assign a name to value using `def`.
-> When a name is assigned a value, that name is called a *symbol*.
+> `def`를 사용해서 값에 이름을 붙일 수 있다.
+> 값에 붙여지는 이름을 *symbol*이라고 한다.
 {: ng-show="block171" .description}
 
-> Reference: [Assignment def](http://clojurebridge.github.io/community-docs/docs/clojure/def/)
+> 참조: [Assignment def](http://clojurebridge.github.io/community-docs/docs/clojure/def/)
 {: ng-show="block171" .description}
 
 ```clojure
@@ -290,8 +285,8 @@ Prefix: (+ 1 2 3 4 5 6 7 8 9)
 <section ng-controller="NarrativeController">
 #### Assign results to symbols <button class="link" ng-bind-html="details" ng-model="block181" ng-click="block181=!block181"></button>
 
-> You can assign more than simple values to symbols. Try the following.
-> Look at the last line, and see how we can use symbols by themselves to refer to a value.
+> 기호에는 단순한 값 이상을 할당할 수 있다. 다음을 보자.
+> 다음줄에서는 값을 참조하는데 어떻게 symbol을 사용하는지를 보여준다.
 {: ng-show="block181" .description}
 
 ```clojure
@@ -305,27 +300,25 @@ average-fruit-amount
 <section>
 #### EXERCISE 1: Basic arithmetic
 
-* How many minutes have elapsed since you arrived at the workshop today?
-* Convert this value from minutes to seconds.
+* 오늘 워크샵에 도착한 이후로 몇분이나 지났나요?
+* 이 값을 분에서 초로 변환하세요.
 </section>
 
 <section>
 #### EXERCISE 2 [BONUS]: Minutes and seconds
 
-* Convert 1000 seconds to minutes and seconds.
-* The minutes and the seconds will be separate numbers.
-* `(quot x y)` will give you the whole number part of x divided by y.
-* `(rem x y)` will give you the remainder of x divided by y.
+* 1000초를 분과 초로 변환하세요.
+* 분과 초는 별도의 숫자가 됩니다.
+* `(quot x y)`는 y로 나눈 x의 몫을 구해줍니다.
+* `(rem x y)`는 y로 나눈 x의 나머지를 구해줍니다.
 </section>
 
 {% comment %}
 
-:star2: A link below is for a slide only. Go to [README.md](../README.md)
-instead. :star2:
+:star2: 다음 링크는 슬라이드만 있습니다. 대신 [README.md](../README.md)로 가세요.:star2:
 
 {% endcomment %}
 
 <section>
-Return to the <a href="javascript:;" onClick="Reveal.slide(1);">first slide</a>,
-or go to the [curriculum outline](/curriculum/#/1).
+<a href="javascript:;" onClick="Reveal.slide(1);">first slide</a>로 돌아가거나, [curriculum outline](/curriculum/#/1)로 가세요.
 </section>
