@@ -215,7 +215,7 @@ ng-click="block21=!block21"></button>
 </section>
 
 <section ng-controller="NarrativeController">
-### Truthy and falsey table <button class="link" ng-bind-html="details" ng-model="block91" ng-click="block91=!block91"></button>
+### 진리표 <button class="link" ng-bind-html="details" ng-model="block91" ng-click="block91=!block91"></button>
 
 > `and`, `or`, `not`은 다른 함수들처럼 행동합니다.(정확히는 함수는 아니지만 함수처럼 행동합니다.) 그렇기 때문에 이것들은 앞서 산술연산에서 본  _prefic 표기법_을 따릅니다.
 {: ng-show="block91" .description}
@@ -230,7 +230,7 @@ ng-click="block21=!block21"></button>
 </section>
 
 <section ng-controller="NarrativeController">
-#### `and`, `or`, and `not` combination <button class="link" ng-bind-html="details" ng-model="block101" ng-click="block101=!block101"></button>
+#### `and`, `or`, `not` 조합 <button class="link" ng-bind-html="details" ng-model="block101" ng-click="block101=!block101"></button>
 
 > `and`, `or`, `not`은 조합해서 사용할 수 있으며 이 경우에는 읽기 어려울 수 있습니다.
 > 다음 예제를 봅시다:
@@ -247,7 +247,7 @@ ng-click="block21=!block21"></button>
 </section>
 
 <section ng-controller="NarrativeController">
-#### [Bonus] `cond`, `and`, `or`, and `not` combination <button class="link" ng-bind-html="details" ng-model="block110" ng-click="block110=!block110"></button>
+#### [Bonus] `cond`, `and`, `or`, `not` 조합 <button class="link" ng-bind-html="details" ng-model="block110" ng-click="block110=!block110"></button>
 
 > 지금까지 `cond`,`and`,`or`,`not`을 배웠습니다. 이것들을 조합해서 만들 수 있는 함수는 무엇이 있을 지 생각해봅시다.
 > 다음 예제를 봅시다.
