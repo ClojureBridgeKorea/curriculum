@@ -27,7 +27,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 
 #### <button class="link" ng-model="block11" ng-click="block11=!block11">Intro</button>
 
-> 지금까지, 데이터 하나하나를 다뤘습니다:숫자,문자열,값. 프로그래밍시에는 데이터들의 묶음을 가지고 작업하는 경우가 더 많습니다.
+> 지금까지, 데이터 하나하나를 다뤘습니다:숫자,문자열,값.  프로그래밍시에는 데이터들의 묶음을 가지고 작업하는 경우가 더 많습니다.
 {: ng-show="block11" .description}
 
 > 클로저는 이러한 데이터들의 *collections*와 함께 작업할 수 있는 훌륭한 기능들을 갖추고 있습니다. 클로저는 네가지의 collections을 제공할 뿐만 아니라 이 모든 collection들을 함께 사용하는 일관된 방법을 제공합니다.
@@ -85,8 +85,6 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 #### 생성 <button class="link" ng-bind-html="details" ng-model="block61" ng-click="block61=!block61"></button>
 
 > 다음 두 함수는 새로운 벡터를 만들 때 사용합니다. `vector`함수는 원하는 수의 값을 가져와서 새로운 벡터에 넣습니다. `conj`는 모든 자료구조에서 볼 수 있는 흥미로운 함수입니다. 벡터에는 벡터와 값을 가져와서 벡터의 맨 끝에 그 값을 추가한 새로운 벡터를 리턴합니다. `conj`는 왜 이름이 `conj`일까요? `conj`는 join or combine을 의미하는 conjoin을 짧게 쓴 것입니다. 이것이 바로 우리가 하는 일입니다:벡터에 새로운 값을 추가합니다.
-With vectors, it takes a vector and an item and
-
 {: ng-show="block61" .description}
 
 ```clojure
@@ -143,7 +141,7 @@ With vectors, it takes a vector and an item and
 <section ng-controller="NarrativeController">
 ### Maps
 
-#### key value pairs <button class="link" ng-bind-html="details" ng-model="block101" ng-click="block101=!block101"></button>
+#### 키와 값의 쌍들 <button class="link" ng-bind-html="details" ng-model="block101" ng-click="block101=!block101"></button>
 
 > 맵은 키값과 그에 관련된 value값의 집합이 들어있습니다. 이는 사전을 생각하면 됩니다:우리는 단어(keyworld)를 사용해서 뜻(value)을 찾아봅니다. 만약 다른 언어를 이용해서 프로그래밍한다면 dictionarie, hash, associative array와 같은 이름으로 맵과 유사한 것을 볼 수 있을것입니다.
 {: ng-show="block101" .description}
