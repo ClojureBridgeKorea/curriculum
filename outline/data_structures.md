@@ -13,7 +13,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 {% endcomment %}
 
 <section>
-Data Structures
+자료구조
 ----------------------------------------
 {: .slide-title .chapter}
 
@@ -22,20 +22,15 @@ Data Structures
 </section>
 
 <section>
-### Group of data - Collections
+### 데이터 묶음 - Collections
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block11" ng-click="block11=!block11">Intro</button>
 
-> So far, we've dealt with discrete pieces of data: one number, one
-string, one value. When programming, it is more often the case that
-you want to work with groups of data.
+> 지금까지, 데이터 하나하나를 다뤘습니다:숫자,문자열,값. 프로그래밍시에는 데이터들의 묶음을 가지고 작업하는 경우가 더 많습니다.
 {: ng-show="block11" .description}
 
-> Clojure has great facilities for working with these groups, or
-*collections*, of data. Not only does it provide four different types
-of collections, but it also provides a uniform way to use all of these
-collections together.
+> 클로저는 이러한 데이터들의 *collections*와 함께 작업할 수 있는 훌륭한 기능들을 갖추고 있습니다. 클로저는 네가지의 collections을 제공할 뿐만 아니라 이 모든 collection들을 함께 사용하는 일관된 방법을 제공합니다.
 {: ng-show="block11" .description}
 </section>
 
@@ -43,25 +38,17 @@ collections together.
 ### Vectors
 {: .slide_title .slide}
 
-#### Sequential collection <button class="link" ng-bind-html="details" ng-model="block21" ng-click="block21=!block21"></button>
+#### 순차적인 모음 <button class="link" ng-bind-html="details" ng-model="block21" ng-click="block21=!block21"></button>
 
-> A vector is a sequential collection of values. A vector may be
-> empty. A vector may contain values of different types.
-> Each value in a vector is numbered starting at 0, that number is
-> called its index. The index is used to refer to each value when
-> looking them up.
+> 벡터는 값들의 순차적인 모음입니다. 벡터는 비어있을 수 있습니다. 벡터는 다른 타입의 값들을 담을 수 있습니다. 벡터의 값들은 0에서부터 시작하고 이 숫자를 인덱스라고 합니다. 인덱스는 값들을 참조할 때 사용합니다.
 {: ng-show="block21" .description}
 
-#### Compartment-like structure <button class="link" ng-bind-html="details" ng-model="block22" ng-click="block22=!block22"></button>
+#### 객실과 비슷한 구조 <button class="link" ng-bind-html="details" ng-model="block22" ng-click="block22=!block22"></button>
 
-> To imagine a vector, imagine a box split into some number of
-> equally-sized compartments. Each of those compartments has a number.
-> You can put a piece of data inside each compartment and always know
-> where to find it, as it has a number.
+> 벡터를 상상하기 위해서는 일정한 크기의 칸으로 나누어진 박스를 상상해 보세요. 각각의 칸은 수를 가지고 있습니다. 각각의 칸에는 데이터들을 넣을 수 있고 번호가 있기 때문에 어디서 그 데이터를 찾아야 할 지 알 수 있습니다.
 {: ng-show="block22" .description}
 
-> Note that the numbers start with 0. That may seem strange, but we
-> often count from zero when programming.
+> 그 숫자는 0부터 시작되한다는 것을 주의하세요. 이상하게 보일 수도 있지만 프로그래밍시에 0부터 계산해야 합니다.
 {: ng-show="block22" .description}
 
 ![Vector](img/vector.png)
@@ -69,11 +56,9 @@ collections together.
 </section>
 
 <section ng-controller="NarrativeController">
-#### Syntax <button class="link" ng-bind-html="details" ng-model="block31" ng-click="block31=!block31"></button>
+#### 문법 <button class="link" ng-bind-html="details" ng-model="block31" ng-click="block31=!block31"></button>
 
->Vectors are written using square brackets with any number of pieces
->of data inside them, separated by spaces. Here are some examples of
->vectors:
+> 벡터는 원하는 개수의 값들을 []안에 공백으로 구분하여 써서 사용합니다.  다음은 벡터에 관한 예제들 입니다:
 {: ng-show="block31" .description}
 
 ```clojure
@@ -84,11 +69,9 @@ collections together.
 </section>
 
 <section ng-controller="NarrativeController">
-#### Example <button class="link" ng-bind-html="details" ng-model="block41" ng-click="block41=!block41"></button>
+#### 사용 예 <button class="link" ng-bind-html="details" ng-model="block41" ng-click="block41=!block41"></button>
 
-> When there are a couple of turtles,
-> `(turtle-names)` command will return turtle names in the form of a
-> vector.
+> 한쌍의 거북이들이 있을때, `(turtle-name)`명령은 벡터의 형태로 거북이의 이름을 리턴합니다.
 {: ng-show="block41" .description}
 
 ```clojure
@@ -99,16 +82,11 @@ collections together.
 
 
 <section ng-controller="NarrativeController">
-#### Creation <button class="link" ng-bind-html="details" ng-model="block61" ng-click="block61=!block61"></button>
+#### 생성 <button class="link" ng-bind-html="details" ng-model="block61" ng-click="block61=!block61"></button>
 
-> The next two functions are used to make new vectors. The `vector`
-> function takes any number of items and puts them in a new vector.
-> `conj` is an interesting function that you'll see used with all the
-> data structures. With vectors, it takes a vector and an item and
-> returns a new vector with that item added to the end of the vector.
-> Why the name `conj`? `conj` is short for conjoin, which means to 
-> join or combine. This is what we're doing: we're joining the new
-> item to the vector.
+> 다음 두 함수는 새로운 벡터를 만들 때 사용합니다. `vector`함수는 원하는 수의 값을 가져와서 새로운 벡터에 넣습니다. `conj`는 모든 자료구조에서 볼 수 있는 흥미로운 함수입니다. 벡터에는 벡터와 값을 가져와서 벡터의 맨 끝에 그 값을 추가한 새로운 벡터를 리턴합니다. `conj`는 왜 이름이 `conj`일까요? `conj`는 join or combine을 의미하는 conjoin을 짧게 쓴 것입니다. 이것이 바로 우리가 하는 일입니다:벡터에 새로운 값을 추가합니다.
+With vectors, it takes a vector and an item and
+
 {: ng-show="block61" .description}
 
 ```clojure
@@ -121,16 +99,9 @@ collections together.
 </section>
 
 <section ng-controller="NarrativeController">
-#### Extraction <button class="link" ng-bind-html="details" ng-model="block81" ng-click="block81=!block81"></button>
+#### 추출 <button class="link" ng-bind-html="details" ng-model="block81" ng-click="block81=!block81"></button>
 
-> Now, take a look at these four functions. `count` gives us a
-count of the number of items in a vector. `nth` gives us the nth
-item in the vector. Note that we start counting at 0, so in the
-example, calling `nth` with the number 1 gives us what we'd call the
-second element when we aren't programming. `first` returns the first
-item in the collection. `rest` returns all except the first item.
-Try not to think about that and `nth` at the same time, as they can
-be confusing.
+> 다음 네개의 함수를 살펴봅시다. `count`는 벡터 안에 있는 값의 개수를 알려줍니다. `nth`는 벡터안의 n번째 값을 알려줍니다. 이때 0부터 세야한다는 것을 주의하세요. 따라서 이 경우에는 1과 함께 사용된 `nth`는 우리가 따로 프로그래밍 하지 않는다면 두번째 값을 알려줍니다. `first`는 벡터에서 첫번째 값을 리턴해줍니다. `rest`는 첫번째 값을 제외한 모든 값들을 리턴해줍니다. 혼란스러울 수 있으므로 `nth`와 동시에 생각하지 않도록하세요.
 {: ng-show="block81" .description}
 
 ```clojure
@@ -146,28 +117,26 @@ be confusing.
 </section>
 
 <section>
-#### EXERCISE 1: See turtle names
+#### EXERCISE 1: 거북이 이름 확인하기
 {: .slide_title .slide}
 
-1. Add a turtle using a piece of code in the file
-  * Go to `walk.clj` file
-  * Add a line: `(add-turtle :neo)` on the last of `walk.clj` file
-  * Select this line and click "Reload Selection"
-2. (Optional) add a turtle using REPL
-  * Type `(add-turtle :oracle)` followed by enter on the bottom REPL pane
-3. See turtle names
-  * Type `(turtle-names)` on the bottom REPL pane and see the result
+1. 파일의 코드를 이용해서 거북이를 추가하세요.
+  * `walk.clj`파일로 가세요
+  * `walk.clj`파일의 맨 끝에 `(add-turtle :neo)`를 추가하세요
+  * 이 줄을 선택하고 "Reload Selection"을 클릭하세요
+2. (선택사항) REPL을 사용하여 거북이를 추가하세요
+  * `(add-turtle :oracle)`을 하단 REPL창에 입력하세요.
+3. 거북이 이름을 확인하세요.
+  * 하단 REPL창에 `(turtle-names)`를 입력하고 결과를 확인하세요.
 </section>
 
 <section>
-#### EXERCISE 2: Make a vector
+#### EXERCISE 2: 벡터 만들기
 {: .slide_title .slide}
 
-* Go to `myproject`'s `core.clj` and start InstaREPL
-* Make a vector of the high temperatures for the next 7 days in the
-  town where you live.
-* Then use the `nth` function to get the high temperature for next
-  Tuesday.
+* `myproject`의 `core.clj`로 가고 InstaREPL을 실행하세요
+* 당신이 살고 있는 마을에서 다음 7일 동안 고온의 벡터를 만드세요.
+* 그런 다음 다음주 화요일의 고온을 얻기 위해 `nth`함수를 사용하세요.
 </section>
 
 
@@ -176,28 +145,19 @@ be confusing.
 
 #### key value pairs <button class="link" ng-bind-html="details" ng-model="block101" ng-click="block101=!block101"></button>
 
->Maps hold a set of keys and values associated with them. You can
->think of it like a dictionary: you look up things using a word (a
->keyword) and see the definition (its value). If you've programmed in
->another language, you might have seen something like maps--maybe
->called dictionaries, hashes, or associative arrays.
+> 맵은 키값과 그에 관련된 value값의 집합이 들어있습니다. 이는 사전을 생각하면 됩니다:우리는 단어(keyworld)를 사용해서 뜻(value)을 찾아봅니다. 만약 다른 언어를 이용해서 프로그래밍한다면 dictionarie, hash, associative array와 같은 이름으로 맵과 유사한 것을 볼 수 있을것입니다.
 {: ng-show="block101" .description}
 
 ![Map](img/map.png)
 </section>
 
 <section ng-controller="NarrativeController">
-#### Syntax <button class="link" ng-bind-html="details" ng-model="block102" ng-click="block102=!block102"></button>
+#### 문법 <button class="link" ng-bind-html="details" ng-model="block102" ng-click="block102=!block102"></button>
 
-> We write maps by enclosing alternating keys and values in curly braces, like so.
+> 맵은 중괄호 안에 키와 값을 교대로 써서 만듭니다.
 {: ng-show="block102" .description}
 
-> Maps are useful because they can hold data in a way we normally
-> think about it. Take our made up example, Sally Brown. A map can
-> hold her first name and last name, her address, her favorite food,
-> or anything else. It's a simple way to collect that data and make it
-> easy to look up. The last example is an empty map. It is a map that
-> is ready to hold some things, but doesn't have anything in it yet.
+> 맵은 우리가 일반적으로 생각하는 방식으로 데이터를 저장할 수 있기 때문에 유용합니다. Sally Brown을 예로 들어봅시다. 맵은 그녀의 성과 이름, 주소, 좋아하는 음식 등의 정보를 저장할 수 있습니다. 이는 해당 데이터를 모으고 보기편하게 만드는 간단한 방법입니다. 마지막 예시는 비어있는 맵입니다. 이는 값을 저장할 준비는 되어있지만 아직 아무것도 없는 맵입니다.
 {: ng-show="block102" .description}
 
 ```clojure
@@ -208,10 +168,9 @@ be confusing.
 </section>
 
 <section ng-controller="NarrativeController">
-#### Example <button class="link" ng-bind-html="details" ng-model="block103" ng-click="block103=!block103"></button>
+#### 사용 예 <button class="link" ng-bind-html="details" ng-model="block103" ng-click="block103=!block103"></button>
 
-> When turtle received commands such that `forward` or `right`,
-> those return the result as a form of map of map.
+> 거북이가 `forward`나 `right`같은 명령을 받으면 맵의맵 형태로 결과를 리턴해 줍니다.
 {: ng-show="block103" .description}
 
 ```clojure
@@ -223,9 +182,9 @@ be confusing.
 </section>
 
 <section ng-controller="NarrativeController">
-#### Creation <button class="link" ng-bind-html="details" ng-model="block104" ng-click="block104=!block104"></button>
+#### 생성 <button class="link" ng-bind-html="details" ng-model="block104" ng-click="block104=!block104"></button>
 
-> `assoc` and `dissoc` are paired functions: they associate and disassociate items from a map. See how we add the last name "Brown" to the map with `assoc`, and then we remove it with `dissoc`. `merge` merges two maps together to make a new map.
+> `assoc`과 `dissoc`은 한쌍의 함수입니다:이것들은 맵에서 항목들을 연결하거나 연결을 끊습니다. `assoc`을 이용해서 어떻게 성"Brown"을 추가하고, `dissoc`을 이용해서 그것을 삭제하는지 알아봅시다. `merge`는 두개의 맵을 합쳐서 새로운 맵을 만듭니다. 
 {: ng-show="block104" .description}
 
 ```clojure
@@ -241,17 +200,12 @@ be confusing.
 </section>
 
 <section ng-controller="NarrativeController">
-#### Extraction 1 <button class="link" ng-bind-html="details" ng-model="block105" ng-click="block105=!block105"></button>
+#### 추출 1 <button class="link" ng-bind-html="details" ng-model="block105" ng-click="block105=!block105"></button>
 
-> `count`, every collection has this function. Why do you think the
-> answer is two? `count` is returning the number of associations.
+> `count`는 모든 collection들이 가지는 함수입니다. 왜 답이 2라고 생각하나요? `count`는 연결의 결과를 리턴해주기 때문입니다.
 {: ng-show="block105" .description}
 
-> Since map is a key-value pair, the key is used to get a value from a
-> map. One of the ways often used in Clojure is the examples below.
-> We can use a keyword like using a function in order to look
-> up values in a map. In the last example, we supplied the key `:MISS`.
-> This works when the key we asked for is not in the map.
+> 맵은 키-값의 쌍으로 이루어져있기 때문에 키는 맵에서 값을 얻기 위해서 사용이 됩니다. 다음은 클로저에서 종종 사용되는 방법입니다. 맵에서 값을 찾기 위해서 키는 함수처럼 사용될 수 있습니다. 마지막 예에선, `:MISS`라는 키를 제공하고있습니다. 이는 우리가 찾는 키값이 맵에 존재하지 않을 때 작동합니다. 
 {: ng-show="block105" .description}
 
 ```clojure
@@ -270,11 +224,9 @@ be confusing.
 </section>
 
 <section ng-controller="NarrativeController">
-#### Extraction 2 <button class="link" ng-bind-html="details" ng-model="block106" ng-click="block106=!block106"></button>
+#### 추출 2 <button class="link" ng-bind-html="details" ng-model="block106" ng-click="block106=!block106"></button>
 
-> Then we have `keys` and `vals`, which are pretty simple: they return
-> the keys and values in the map. The order is not guaranteed, so we
-> could have gotten `(:first :last)` or `(:last :first)`.
+> `keys`와 `vals`라는 간단한 함수들이 있습니다:맵에서 키들과 값들일 리턴합니다. 순서는 보장할 수 없기때문에 `(:first :last)`나 `(:last :first)`의 형태로 얻을 것입니다.
 {: ng-show="block106" .description}
 
 ```clojure
@@ -287,16 +239,9 @@ be confusing.
 </section>
 
 <section ng-controller="NarrativeController">
-#### Update <button class="link" ng-bind-html="details" ng-model="block110" ng-click="block110=!block110"></button>
+#### 업데이트 <button class="link" ng-bind-html="details" ng-model="block110" ng-click="block110=!block110"></button>
 
-> After the creation, we want to save a new value associated to the
-> key. The `assoc` function can be used by assigning a new value to
-> the existing key.
-> Also, there's handy function `update`. The function takes map and
-> a key with a function. The value of specified key will be the first
-> argument of the given function.
-> The `update-in` function works like `update`, but takes a vector of keys
-> to update at a path to a nested map.
+> 맵을 생성한 후 키에 새로운 값을 연결시키기를 원할 수 있습니다. `assoc`함수는 기존의 키에 새로운 값을 추가할 때 사용될 수 있습니다. 또, `update`라는 편리한 함수도 있습니다. `update`는 맵과 키를 함께 사용합니다. 특정한 키는 함수의 첫번째 인자가 됩니다. `update-in`함수는 `update`처럼 작동하지만 중첩된 맵의 경로에서 업데이트하기 위해 키의 벡터가 필요합니다.
 {: ng-show="block110" .description}
 
 ```clojure
@@ -321,16 +266,12 @@ be confusing.
 
 #### <button class="link" ng-model="block101" ng-click="block101=!block101">Intro</button>
 
-> Simple values such as numbers, keywords, and strings are not the
-> only types of things you can put into collections. You can also put
-> other collections into collections, so you can have a vector of
-> maps, or a list of vectors, or whatever combination fits your data.
+> 수,키워드,문자열과 같은 값들만이 collection에 넣을 수 있는 것은 아닙니다. 다른 collections들도 collection에 넣을 수 있으므로 맵의 벡터, 벡터의 리스트와 같이 데이터에 맞는 조합을 가질 수 있습니다.
 {: ng-show="block101" .description}
 </section>
 
 <section>
 #### Vector of Maps
-
 ```clojure
 (state-all)
 ;=> [{:trinity {:x -1.7484556000744965E-6, :y 39.99999999999996, :angle 90, :color [106 40 126]}}
@@ -368,14 +309,14 @@ st
 
 
 <section>
-#### EXERCISE 3: See turtles states
+#### EXERCISE 3: 거북이들의 상태 확인하기
 {: .slide_title .slide}
 
-* Go to `walk.clj` file
-* Try examples of previous two slides on the REPL
-* See what values you get
+* `walk.clj` 파일로 가세요
+* 앞의 두 슬라이드의 예제를 REPL에서 실행하세요.
+* 얻은 값을 확인하세요
 
-> Don't forget to hit __enter__ when you type code on the REPL
+> REPL에서 코드를 입력할 때 __enter__를 잊지 마세요.
 
 
 ```clojure
@@ -390,32 +331,30 @@ st
 </section>
 
 <section>
-#### EXERCISE 4: Modeling Yourself
+#### EXERCISE 4: 당신을 모델링하세요
 {: .slide_title .slide}
 
-* Use the `myproject`'s `core.clj` and InstaREPL
-* Make a map representing yourself
-* Make sure it contains your first name and last name
-* Then, add your hometown to the map using [assoc](http://grimoire.arrdem.com/1.6.0/clojure.core/assoc/) or [merge](http://grimoire.arrdem.com/1.6.0/clojure.core/merge/).
+* `myproject`의 `core.clj`와 InstaREPL을 사용하세요
+* 당신을 표현하는 맵을 만드세요
+* 이 맵에는 당신의 성과 이름이 들어있어야합니다.
+* [assoc](http://grimoire.arrdem.com/1.6.0/clojure.core/assoc/)이나  [merge](http://grimoire.arrdem.com/1.6.0/clojure.core/merge/).를 사용해서 맵에 당신의 고향을 추가하세요.
 </section>
 
 <section>
-#### EXERCISE 5 [BONUS]: Modeling your classmates
+#### EXERCISE 5 [BONUS]: 친구를 모델링하세요
 {: .slide_title .slide}
 
-* First, take the map you made about yourself in previous exercise.
-* Then, create a vector of maps containing the first name, last name and hometown of two or three other classmates around you.
-* Lastly, add your map to their information using [conj](http://grimoire.arrdem.com/1.6.0/clojure.core/conj/).
+* 첫번째로, 앞의 excercise에서 만든 당신에 대한 맵을 가져오세요.
+* 당신 주위에 있는 두세명의 친구의 성,이름,고향을 담고있는 맵 벡터를 만드세요.
+* 마지막으로 [conj](http://grimoire.arrdem.com/1.6.0/clojure.core/conj/)을 사용해서 당신의 맵을 그들의 정보에 추가하세요.
 </section>
 
 {% comment %}
 
-:star2: A link below is for a slide only. Go to [README.md](../README.md)
-instead. :star2:
+:star2: 아래의 링크는 슬라이드 전용입니다. 대신 [README.md](../README.md)로 가세요 :star2:
 
 {% endcomment %}
 
 <section>
-Return to the <a href="javascript:;" onClick="Reveal.slide(1);">first slide</a>,
-or go to the [curriculum outline](/curriculum/#/1).
+<a href="javascript:;" onClick="Reveal.slide(1);">first slide</a>로 돌아가거나 [curriculum outline](/curriculum/#/1)으로 가세요.
 </section>
