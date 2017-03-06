@@ -71,7 +71,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 <section ng-controller="NarrativeController">
 #### 사용 예 <button class="link" ng-bind-html="details" ng-model="block41" ng-click="block41=!block41"></button>
 
-> 한쌍의 거북이들이 있을때, `(turtle-name)`명령은 벡터의 형태로 거북이의 이름을 리턴합니다.
+> 한쌍의 거북이들이 있을때, `(turtle-name)`명령은 벡터의 형태로 거북이의 이름을 반환합니다.
 {: ng-show="block41" .description}
 
 ```clojure
@@ -84,7 +84,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 <section ng-controller="NarrativeController">
 #### 생성 <button class="link" ng-bind-html="details" ng-model="block61" ng-click="block61=!block61"></button>
 
-> 다음 두 함수는 새로운 벡터를 만들 때 사용합니다. `vector`함수는 원하는 수의 값을 가져와서 새로운 벡터에 넣습니다. `conj`는 모든 자료구조에서 볼 수 있는 흥미로운 함수입니다. 벡터에는 벡터와 값을 가져와서 벡터의 맨 끝에 그 값을 추가한 새로운 벡터를 리턴합니다. `conj`는 왜 이름이 `conj`일까요? `conj`는 join or combine을 의미하는 conjoin을 짧게 쓴 것입니다. 이것이 바로 우리가 하는 일입니다:벡터에 새로운 값을 추가합니다.
+> 다음 두 함수는 새로운 벡터를 만들 때 사용합니다. `vector`함수는 원하는 수의 값을 가져와서 새로운 벡터에 넣습니다. `conj`는 모든 자료구조에서 볼 수 있는 흥미로운 함수입니다. 벡터에는 벡터와 값을 가져와서 벡터의 맨 끝에 그 값을 추가한 새로운 벡터를 반환합니다. `conj`는 왜 이름이 `conj`일까요? `conj`는 join or combine을 의미하는 conjoin을 짧게 쓴 것입니다. 이것이 바로 우리가 하는 일입니다:벡터에 새로운 값을 추가합니다.
 {: ng-show="block61" .description}
 
 ```clojure
@@ -99,7 +99,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 <section ng-controller="NarrativeController">
 #### 추출 <button class="link" ng-bind-html="details" ng-model="block81" ng-click="block81=!block81"></button>
 
-> 다음 네개의 함수를 살펴봅시다. `count`는 벡터 안에 있는 값의 개수를 알려줍니다. `nth`는 벡터안의 n번째 값을 알려줍니다. 이때 0부터 세야한다는 것을 주의하세요. 따라서 이 경우에는 1과 함께 사용된 `nth`는 우리가 따로 프로그래밍 하지 않는다면 두번째 값을 알려줍니다. `first`는 벡터에서 첫번째 값을 리턴해줍니다. `rest`는 첫번째 값을 제외한 모든 값들을 리턴해줍니다. 혼란스러울 수 있으므로 `nth`와 동시에 생각하지 않도록하세요.
+> 다음 네개의 함수를 살펴봅시다. `count`는 벡터 안에 있는 값의 개수를 알려줍니다. `nth`는 벡터안의 n번째 값을 알려줍니다. 이때 0부터 세야한다는 것을 주의하세요. 따라서 이 경우에는 1과 함께 사용된 `nth`는 우리가 따로 프로그래밍 하지 않는다면 두번째 값을 알려줍니다. `first`는 벡터에서 첫번째 값을 반환해줍니다. `rest`는 첫번째 값을 제외한 모든 값들을 반환해줍니다. 혼란스러울 수 있으므로 `nth`와 동시에 생각하지 않도록하세요.
 {: ng-show="block81" .description}
 
 ```clojure
@@ -115,24 +115,24 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 </section>
 
 <section>
-#### EXERCISE 1: 거북이 이름 확인하기
+#### 연습문제 1: 거북이 이름 확인하기
 {: .slide_title .slide}
 
 1. 파일의 코드를 이용해서 거북이를 추가하세요.
-  * `walk.clj`파일로 가세요
+  * `walk.clj`파일로 이동하세요.
   * `walk.clj`파일의 맨 끝에 `(add-turtle :neo)`를 추가하세요
   * 이 줄을 선택하고 "Reload Selection"을 클릭하세요
-2. (선택사항) REPL을 사용하여 거북이를 추가하세요
+2. (선택사항) REPL을 사용하여 거북이를 추가합니다.
   * `(add-turtle :oracle)`을 하단 REPL창에 입력하세요.
 3. 거북이 이름을 확인하세요.
   * 하단 REPL창에 `(turtle-names)`를 입력하고 결과를 확인하세요.
 </section>
 
 <section>
-#### EXERCISE 2: 벡터 만들기
+#### 연습문제 2: 벡터 만들기
 {: .slide_title .slide}
 
-* `myproject`의 `core.clj`로 가고 InstaREPL을 실행하세요
+* `myproject`의 `core.clj`로 이동해서 InstaREPL을 실행하세요.
 * 당신이 살고 있는 마을에서 다음 7일 동안 고온의 벡터를 만드세요.
 * 그런 다음 다음주 화요일의 고온을 얻기 위해 `nth`함수를 사용하세요.
 </section>
@@ -168,7 +168,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 <section ng-controller="NarrativeController">
 #### 사용 예 <button class="link" ng-bind-html="details" ng-model="block103" ng-click="block103=!block103"></button>
 
-> 거북이가 `forward`나 `right`같은 명령을 받으면 맵의맵 형태로 결과를 리턴해 줍니다.
+> 거북이가 `forward`나 `right`같은 명령을 받으면 맵의맵 형태로 결과를 반환해 줍니다.
 {: ng-show="block103" .description}
 
 ```clojure
@@ -200,7 +200,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 <section ng-controller="NarrativeController">
 #### 추출 1 <button class="link" ng-bind-html="details" ng-model="block105" ng-click="block105=!block105"></button>
 
-> `count`는 모든 collection들이 가지는 함수입니다. 왜 답이 2라고 생각하나요? `count`는 연결의 결과를 리턴해주기 때문입니다.
+> `count`는 모든 collection들이 가지는 함수입니다. 왜 답이 2라고 생각하나요? `count`는 연결의 결과를 반환해주기 때문입니다.
 {: ng-show="block105" .description}
 
 > 맵은 키-값의 쌍으로 이루어져있기 때문에 키는 맵에서 값을 얻기 위해서 사용이 됩니다. 다음은 클로저에서 종종 사용되는 방법입니다. 맵에서 값을 찾기 위해서 키는 함수처럼 사용될 수 있습니다. 마지막 예에선, `:MISS`라는 키를 제공하고있습니다. 이는 우리가 찾는 키값이 맵에 존재하지 않을 때 작동합니다. 
@@ -224,7 +224,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 <section ng-controller="NarrativeController">
 #### 추출 2 <button class="link" ng-bind-html="details" ng-model="block106" ng-click="block106=!block106"></button>
 
-> `keys`와 `vals`라는 간단한 함수들이 있습니다:맵에서 키들과 값들일 리턴합니다. 순서는 보장할 수 없기때문에 `(:first :last)`나 `(:last :first)`의 형태로 얻을 것입니다.
+> `keys`와 `vals`라는 간단한 함수들이 있습니다:맵에서 키들과 값들을 반환합니다. 순서는 보장할 수 없기때문에 `(:first :last)`나 `(:last :first)`의 형태로 얻을 것입니다.
 {: ng-show="block106" .description}
 
 ```clojure
@@ -307,10 +307,10 @@ st
 
 
 <section>
-#### EXERCISE 3: 거북이들의 상태 확인하기
+#### 연습문제 3: 거북이들의 상태 확인하기
 {: .slide_title .slide}
 
-* `walk.clj` 파일로 가세요
+* `walk.clj` 파일로 이동하세요.
 * 앞의 두 슬라이드의 예제를 REPL에서 실행하세요.
 * 얻은 값을 확인하세요
 
@@ -329,17 +329,17 @@ st
 </section>
 
 <section>
-#### EXERCISE 4: 당신을 모델링하세요
+#### 연습문제 4: 당신을 모델링하세요
 {: .slide_title .slide}
 
-* `myproject`의 `core.clj`와 InstaREPL을 사용하세요
-* 당신을 표현하는 맵을 만드세요
+* `myproject`의 `core.clj`와 InstaREPL을 사용하세요.
+* 당신을 표현하는 맵을 만드세요.
 * 이 맵에는 당신의 성과 이름이 들어있어야합니다.
 * [assoc](http://grimoire.arrdem.com/1.6.0/clojure.core/assoc/)이나  [merge](http://grimoire.arrdem.com/1.6.0/clojure.core/merge/).를 사용해서 맵에 당신의 고향을 추가하세요.
 </section>
 
 <section>
-#### EXERCISE 5 [BONUS]: 친구를 모델링하세요
+#### 연습문제 5 [보너스]: 친구를 모델링하세요
 {: .slide_title .slide}
 
 * 첫번째로, 앞의 excercise에서 만든 당신에 대한 맵을 가져오세요.
@@ -354,5 +354,5 @@ st
 {% endcomment %}
 
 <section>
-<a href="javascript:;" onClick="Reveal.slide(1);">first slide</a>로 돌아가거나 [curriculum outline](/curriculum/#/1)으로 가세요.
+<a href="javascript:;" onClick="Reveal.slide(1);">첫번째 슬라이드</a>로 돌아가거나 [curriculum outline](/curriculum/#/1)으로 가세요.
 </section>
