@@ -47,9 +47,9 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 > 클로저는 여러분이 배울 수록 거대해지고, 작은 부분으로도 생산적인 일을 할 수 있습니다.
 {: ng-show="block12" .description}
 
-#### 클로저는 _범용적 언어다_ <button class="link" ng-bind-html="details" ng-model="block13" ng-click="block13=!block13"></button>
+#### 클로저는 _범용 언어다_ <button class="link" ng-bind-html="details" ng-model="block13" ng-click="block13=!block13"></button>
 
-> 클로저는 _범용적 언어입니다_. 특정 목적에 집중한 언어가 몇 개 있습니다.
+> 클로저는 _범용 언어입니다_. 특정 목적에 집중한 언어가 몇 개 있습니다.
 > 예를 들어, 자바스크립트는 예전부터 웹페이지에만 사용됐습니다.(약간의 변화는 있지만)
 > Objective-C 언어는 주로 아이폰 앱에 쓰였죠. 
 > 오늘 드로잉 애플리케이션을 만들건데,
@@ -76,7 +76,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 #### 데이터 처리 <button class="link" ng-bind-html="details" ng-model="block22" ng-click="block22=!block22"></button>
 
 > 클로저는 데이터 처리에 좋다고 알려져 있습니다. 그 이유는,
-> 자료 구조가 좋기 때문입니다. --즉, 데이터를 표한하는 내장된 몇가지 방법은 쉽고 강력합니다. 
+> 자료 구조가 좋기 때문입니다. --즉, 데이터를 표한하는 내장된 몇가지 방법이 쉽고 강력합니다. 
 {: ng-show="block22" .description}
 
 #### 동시성 <button class="link" ng-bind-html="details" ng-model="block23" ng-click="block23=!block23"></button>
@@ -119,16 +119,16 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 > 괄호 옆에, 컴퓨터에 주는 명령문들을 볼 수 있습니다
 > computer. 그 명령문을 보통 우리는 _함수_라고 합니다.
 > `print-str`, `+` 그리고 `forward` 이것들 모두가 함수입니다. 
-> 이러한 함수들이 실행되면, 어떠한 타입의 값을 리턴합니다.
-> 클로저 함수는 항상 값을 리턴합니다. 
+> 이러한 함수들이 실행되면, 어떠한 타입의 값을 반환합니다.
+> 클로저 함수는 항상 값을 반환합니다. 
 {: ng-show="block32" .description}
 
 #### 인자 <button class="link" ng-bind-html="details" ng-model="block33" ng-click="block33=!block33"></button>
 
 > 많은 함수들이 _인자_를 가집니다.--함수 뒤에 오는 괄호 안에 있는 모든 것--
-> `print-str`은 "Hello, World!"를 인자로 가지고 문자열을 리턴합니다.
-> `+`은 3과 4를 인자로 가지고, 더하고, 7을 리턴합니다.
-> `forward`는 :trinity와 40을 인자로 가지고, 거북이를 40만큼 옮겨 결과를 리턴합니다.
+> `print-str`은 "Hello, World!"를 인자로 가지고 문자열을 반환합니다.
+> `+`은 3과 4를 인자로 가지고, 더하고, 7을 반환합니다.
+> `forward`는 :trinity와 40을 인자로 가지고, 거북이를 40만큼 옮겨 결과를 반환합니다.
 {: ng-show="block33" .description}
 </section>
 
@@ -212,7 +212,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 </section>
 
 <section>
-#### 연습문제 1: Try Nightcode InstaREPL 기능 해보기
+#### 연습문제 1: Nightcode InstaREPL 기능 해보기
 
 1. Nightcode룰 시작한다.
 2. `myproject`를 들여온다.<br/> (which you created while testing leiningen setup)
@@ -234,11 +234,11 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 <section>
 #### 연습문제 2: 파일과 라인 평가하기 - Part 1
 
-* `welcometoclojurebridge/src/clojurebridge_turtle/walk.clj`를 연다.
-* "Run with REPL"을 누른 다음에 "Reload File"을 눌러 전체 파일을 평가한다.
-* 결과를 지켜본다.
-* 편집기에서 `walk.clj`의 마지막 라인에 `(forward 40)`를 타이핑한다. 라인을 선택하고 "Reload Selection"을 눌러 라인을 평가한다. 
-* 결과를 지켜본다.
+* `welcometoclojurebridge/src/clojurebridge_turtle/walk.clj`를 엽니다.
+* "Run with REPL"을 누른 다음에 "Reload File"을 눌러 전체 파일을 평가합니다.
+* 결과를 지켜봅니다.
+* 편집기에서 `walk.clj`의 마지막 라인에 `(forward 40)`를 타이핑한다. 라인을 선택하고 "Reload Selection"을 눌러 라인을 평가합니다. 
+* 결과를 지켜봅니다.
 
 (연습문제 3에서 계속)
 </section>
@@ -248,30 +248,30 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 
 (연습문제 2가 끝났다는 가정 하에)
 
-* `(right 90)`을 쓰고 REPL 창 하단의 "enter"를 누른다![Run with REPL pane](img/run-with-repl.png)
-* 거북이가 어떻게 되는지 확인한다.
+* `(right 90)`을 쓰고 REPL 창 하단의 "enter"를 누릅니다![Run with REPL pane](img/run-with-repl.png)
+* 거북이가 어떻게 되는지 확인합니다.
 * 이 둘을 살펴보고 [Turtles App API](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md)와
 [How To Walk Turtles](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)
-[section 1 and 2], 거북이를 움직이게 할 명령어를 시도해본다.
+[section 1 and 2], 거북이를 움직이게 할 명령어를 시도해봅니다.
 </section>
 
 <section>
-#### 연습문제 4: 클로저 문서 살펴보기Look at Clojure docs
+#### 연습문제 4: 클로저 설명서 살펴보기 
  
-* REPL창 아래에, 사용한 함수에 대한 설명서를 살펴본다.
-* `(doc function-name)` 명령어를 쓸 수도 있다.
-* `(doc +)`와 `(doc forward)`를 REPL에서 사용해본다.
-* T `-`, `*`, 또는 `doc`와 같은 여태껏 써왔던 다른 함수들을 사용해본다.
+* REPL창 아래에, 사용한 함수에 대한 설명서를 살펴봅니다.
+* `(doc function-name)` 명령어를 쓸 수도 있습니다.
+* `(doc +)`와 `(doc forward)`를 REPL에서 사용해봅니다.
+* T `-`, `*`, 또는 `doc`와 같은 여태껏 써왔던 다른 함수들을 사용해봅니다.
 </section>
 
 {% comment %}
 
-:star2: 아래의 링크는 슬라이드 전용입니다. [README.md](../README.md)
+:star2: 아래의 링크는 슬라이드 전용입니다. 대신에 [README.md](../README.md)로 가세요.
 instead. :star2:
 
 {% endcomment %}
 
 <section>
-Return to the <a href="javascript:;" onClick="Reveal.slide(1);">first slide</a>,
-or go to the [curriculum outline](/curriculum/#/1).
+<a href="javascript:;" onClick="Reveal.slide(1);">첫번째 슬라이드로 가거나</a>,
+[curriculum outline](/curriculum/#/1)로 가세요.
 </section>

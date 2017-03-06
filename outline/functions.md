@@ -19,7 +19,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 * 함수란?
 * 함수명 정하기
-* [보너스 섹션] 함수를 취하는 함수
+* [보너스 섹션] 함수를 인자로 갖는 함수
     - `map`과 `reduce`
 * [보너스 섹션] 익명 함수 Anonymous function
 * [보너스 섹션] 
@@ -32,7 +32,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 #### <button class="link" ng-model="block11" ng-click="block11=!block11">Intro</button>
 
-> `count`, `conj`, `first`, 그리고  `rest` 같은 몇 가지 함수들을 본 적이 있습니다.
+> `count`, `conj`, `first`, 그턴고  `rest` 같은 몇 가지 함수들을 본 적이 있습니다.
 > 우리가 사용한 모든 산술 연산도 마찬가지로 함수입니다 : `+`, `-`, `*`, `/`
 > 그렇다면 함수란 무엇일까요?
 {: ng-show="block11" .description}
@@ -45,7 +45,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 * `count`, `conj`, `first`
 * `+`, `-`, `*`, `/`
-* 값을 취하고 값을 반환하는 코드 A piece of code that takes values and returns a value
+* 값을 취하고 값을 반환하는 코드
 </section>
 
 <section ng-controller="NarrativeController">
@@ -104,13 +104,13 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 {: .slide_title .slide}
 
 1. 함수 작성하기 
-  * `walk.clj`로 이동한다.
+  * `walk.clj`로 이동합니다.
   * 편집기에서, 슬라이드에 있는 `forward-right` 함수를 작성합니다. (아래쪽)
-  * (선택) `walk.clj`를 저장한다.
-  * `forward-right` 함수 전체를 선택하고 Eval Selection을 누른다.
+  * (선택) `walk.clj`를 저장합니다.
+  * `forward-right` 함수 전체를 선택하고 Eval Selection을 누릅니다.
 2. 함수 사용하기
-  * REPL 창 오른쪽에 `(forward-right :trinity)`를 쓴다.
-  * 위를 최소 8번 반복한다.(위 화살표와 엔터를 사용한다.)
+  * REPL 창 오른쪽에 `(forward-right :trinity)`를 입력합니다.
+  * 위를 최소 8번 반복합니다.(위 화살표와 엔터를 사용하세요.)
 
 ```clojure
 (defn forward-right
@@ -174,7 +174,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 <section ng-controller="NarrativeController">
 #### [보너스 섹션]
 
-### 함수를 취하는 함수 
+### 함수를 인자로 갖는 함수 
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block71" ng-click="block71=!block71">Intro</button>
@@ -349,7 +349,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 > 다음엔, `let`이 보입니다. `let`은 이름과 값이 번갈아 나오는 벡터를 취합니다.
 > `t1`이 이름이고,`(이름)`의 결과를 `t1`에 할당합니다.
-> 또 `(성씨)`의 결과를 `t2`에 할당합니다.
+> 또 `(성)`의 결과를 `t2`에 할당합니다.
 {: ng-show="block312" .description}
 
 > 이름과 값의 벡터 다음에, `let`함수의 바디가 있습니다.
@@ -357,7 +357,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 > `let`안에 `t1`과 `t2`가 정의되어있습니다. 
 {: ng-show="block313" .description}
 
-> `walk.clj`로 이동해서 `opposite`함수를 작성한다.
+> `walk.clj`로 이동해서 `opposite`함수를 작성합니다.
 > 그런 다음, 함수 정의의 마지막 줄에서 `opposite`함수를 평가해봅니다. 
 > 또한, `opposite`함수의 사용 예제를 평가해봅니다.
 {: ng-show="block314" .description}
@@ -379,12 +379,12 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 {% comment %}
 
-:star2: 아래의 링크는 슬라이드 전용입니다. [README.md](../README.md)
+:star2: 아래의 링크는 슬라이드 전용입니다. 대신에 [README.md](../README.md)로 가세요.
 instead. :star2:
 
 {% endcomment %}
 
 <section>
-Return to the <a href="javascript:;" onClick="Reveal.slide(1);">first slide</a>,
-or go to the [curriculum outline](/curriculum/#/1).
+<a href="javascript:;" onClick="Reveal.slide(1);">첫번째 슬라이드로 돌아가거나</a>,
+[curriculum outline](/curriculum/#/1)으로 가세요.
 </section>

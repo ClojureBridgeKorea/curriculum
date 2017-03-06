@@ -73,7 +73,7 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 > 클로저는 시퀀스를 *반복*할 때 아주 좋습니다.
 > 시퀀스를 다루는 많은 함수들이 있습니다.
 > 예를 들어, `doseq`, `dotimes`, `for`, `loop`, `doall`, or `dorun`.
-> `map`과 `reduce` 함수를 이미 "함수를 취하는 함수" 섹션에서 보았습니다.
+> `map`과 `reduce` 함수를 이미 "함수를 인자로 갖는 함수" 섹션에서 보았습니다.
 > 이것들 또한 시퀀스를 다루는 함수 입니다.
 {: ng-show="block21" .description}
 </section>
@@ -117,7 +117,7 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 <button class="link" ng-bind-html="details1" ng-model="block41" ng-click="block41=!block41"></button>
 <button class="link" ng-bind-html="details2" ng-model="block42" ng-click="block42=!block42"></button>
 
->`dotimes`(**do number of times**) 함수는 시퀀스를 다루는 함수들 중 잘 쓰이는 또 다른 함수 입니다.
+>`dotimes`(**do number of times**) 함수는 시퀀스를 다루는 함수들 중 잘 쓰이는 또 다른 함수입니다.
 >`doseq`함수처럼 반복적으로 주어진 바디를 실행합니다.
 > 차이점은 인자를 취하는 방법입니다.
 > `dotimes`는 `[name의 최대정수]`를 인자로 취합니다.
@@ -149,12 +149,12 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 
 {% comment %}
 
-:star2: 아래의 링크는 슬라이드 전용입니다. [README.md](../README.md)
+:star2: 아래의 링크는 슬라이드 전용입니다. 대신에 [README.md](../README.md)로 가세요.
 instead. :star2:
 
 {% endcomment %}
 
 <section>
-Return to the <a href="javascript:;" onClick="Reveal.slide(1);">first slide</a>,
-or go to the [curriculum outline](/curriculum/#/1).
+<a href="javascript:;" onClick="Reveal.slide(1);">첫번째 슬라이드로 돌아가거나</a>,
+[curriculum outline](/curriculum/#/1)로 가세요.
 </section>
