@@ -13,50 +13,48 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 {% endcomment %}
 
 <section>
-Functions
+함수
 -------------------------------
 {: .slide-title .chapter}
 
-* What are functions?
-* Naming functions
-* [bonus section] Functions that take other functions
-    - `map` and `reduce`
-* [bonus section] Anonymous function
-* [bonus section] Assignment: `let`
+* 함수란?
+* 함수명 정하기
+* [보너스 섹션] 함수를 인자로 갖는 함수
+    - `map`과 `reduce`
+* [보너스 섹션] 익명 함수 Anonymous function 
+* [보너스 섹션] `let`으로 로컬 바인딩하기
 </section>
 
 <section ng-controller="NarrativeController">
-### What are functions?
+### 함수란?
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block11" ng-click="block11=!block11">Intro</button>
 
-> You have already seen some functions, such as `count`, `conj`,
-> `first`, and `rest`. All the arithmetic we did used functions, as
-> well: `+`, `-`, `*`, and `/`. What does it mean to be a function,
-> though?
+> `count`, `conj`, `first`,`rest` 같은 몇 가지 함수들을 살펴봤습니다.
+> 마찬가지로, 우리가 사용한 모든 산술 연산도 함수입니다 : `+`, `-`, `*`, `/`
+> 그렇다면 함수란 무엇일까요?
 {: ng-show="block11" .description}
 
-> A *function* is an independent, discrete piece of code that takes in
-> some values (called *arguments*) and returns a value.
+> *함수*란 독립적이고 개별적인 코드로, (*인자*라고 하는) 값을 받고 값을 반환합니다.
 {: ng-show="block11" .description}
 
-> Reference: [Basics of Function](http://clojurebridge.github.io/community-docs/docs/clojure/function-creation/)
+> 참고: [Basics of Function](http://clojurebridge.github.io/community-docs/docs/clojure/function-creation/)
 {: ng-show="block11" .description}
 
 * `count`, `conj`, `first`
 * `+`, `-`, `*`, `/`
-* A piece of code that takes values and returns a value
+* 값을 받고 값을 반환하는 코드
 </section>
 
 <section ng-controller="NarrativeController">
-#### An example function <button class="link" ng-bind-html="details" ng-model="block21" ng-click="block21=!block21"></button>
+#### 함수 예제 <button class="link" ng-bind-html="details" ng-model="block21" ng-click="block21=!block21"></button>
 
-> * `defn` specifies that we are defining a function.
-> * `forward-right` is the *name* of this function.
-> * The string on the next line is the documentation for the function, which explains what the function does. This is optional.
-> * `[turtle]` is the list of *arguments*. Here, we have one argument called `turtle`.
-> * `(forward turtle 60) (right turtle 135)` is the *body* of the function. This is what executes when we use the function.
+> * `defn`은 함수를 정의합니다.
+> * `forward-right`은 이 함수의 *이름*입니다.
+> * 다음 줄의 문자열은 함수의 기능을 설명합니다. 이는 선택사항입니다.
+> * `[turtle]`은 *인자*의 리스트입니다. `turtle`이라는 한 개의 인자를 갖고 있습니다.
+> * `(forward turtle 60) (right turtle 135)` 은 함수의 *바디*입니다. 함수를 사용할 때 실행되는 부분입니다.
 {: ng-show="block21" .description}
 
 ```clojure
@@ -69,9 +67,9 @@ Functions
 </section>
 
 <section ng-controller="NarrativeController">
-#### How to use `forward-right` function <button class="link" ng-bind-html="details" ng-model="block31" ng-click="block31=!block31"></button>
+#### `forward-right` 함수 사용 하는 법 <button class="link" ng-bind-html="details" ng-model="block31" ng-click="block31=!block31"></button>
 
-> To use `forward-right`, we *call* the function, just like we've done with all the functions we've already used.
+> `forward-right`를 사용하기 위해선, 함수를 *호출*해야 합니다. 앞서 사용해본 함수들을 다뤘던 것처럼 말이죠.
 {: ng-show="block31" .description}
 
 ```clojure
@@ -81,11 +79,11 @@ Functions
 </section>
 
 <section ng-controller="NarrativeController">
-#### A function with multiple arguments <button class="link" ng-bind-html="details" ng-model="block41" ng-click="block41=!block41"></button>
+#### 인자를 여러 개 갖는 함수
+<button class="link" ng-bind-html="details" ng-model="block41" ng-click="block41=!block41"></button>
 
-> Functions can also take more than one argument. Let's make a
-> `forward-right-with-len` function that takes a forward length, in addition
-> to the turtle.
+> 함수는 한 개 이상의 인자를 가질 수 있습니다.
+> turtle과 길이를 인자로 갖는 `forward-right-with-len`함수를 만들어 보겠습니다.
 {: ng-show="block41" .description}
 
 ```clojure
@@ -101,17 +99,17 @@ Functions
 </section>
 
 <section>
-#### EXERCISE 1: Move turtles using function
+#### 연습문제 1: 함수를 이용해 거북이 움직이기
 {: .slide_title .slide}
 
-1. Write a function
-  * Go to `walk.clj`
-  * On the editor, write `forward-right` function (below) which appeared in the slide.
-  * (Optional) Save `walk.clj`
-  * Select whole `forward-right` function and hit Eval Selection
-2. Use a function
-  * Type `(forward-right :trinity)` on right REPL pane
-  * Repeat above at least 8 times (use up arrow and hit enter)
+1. 함수 작성하기 
+  * `walk.clj`로 이동합니다.
+  * 편집기에서, 슬라이드에 있는 `forward-right` 함수를 작성합니다. (아래쪽)
+  * (선택) `walk.clj`를 저장합니다.
+  * `forward-right` 함수 전체를 선택하고 Eval Selection을 누릅니다.
+2. 함수 사용하기
+  * REPL 창 오른쪽에 `(forward-right :trinity)`를 입력합니다.
+  * 위를 최소 8번 반복합니다.(위 화살표와 엔터를 사용하세요.)
 
 ```clojure
 (defn forward-right
@@ -123,49 +121,47 @@ Functions
 </section>
 
 <section>
-#### EXERCISE 2: Move turtles using function with parameters
+#### 연습문제 2: 인자를 가진 함수를 이용해 거북이 움직이기
 {: .slide_title .slide}
 
-* Go to `walk.clj`
-* On the editor, write `forward-right-with-len-ang` functon that takes three
-  arguments, turtle, len, and angle (extension of `forward-right-with-len`)
-* Select entire `forward-right-with-len-ang` function and hit Reload Selection
-* On the REPL pane, type `(forward-right-with-len-ang :trinity 60 120)`
-* Repeat above, evaluating the function on REPL, many times
+* `walk.clj`로 이동한다.
+* 편집기에서, 3개의 인자를 갖는(turtle, len, and angle) `forward-right-with-len-ang` 함수를 작성한다.(`forward-right-with-len`의 확장판)
+* `forward-right-with-len-ang` 함수 전체를 선택하고 Reload Selection을 누른다.
+* REPL 창에서, `(forward-right-with-len-ang :trinity 60 120)`를 쓴다.
+* REPL에서 함수를 계산하면서 여러 번 반복한다.
+
 </section>
 
 
 <section ng-controller="NarrativeController">
-### Naming functions
+### 함수명 정하기
 {: .slide_title .slide}
 
-#### Names are Symbols <button class="link" ng-bind-html="details" ng-model="block61" ng-click="block61=!block61"></button>
+#### 이름은 심볼이다 <button class="link" ng-bind-html="details" ng-model="block61" ng-click="block61=!block61"></button>
 
-> Function names are symbols, just like the symbols we used with `def`
-> when assigning names to values.
+> 함수명은 심볼입니다. 값에 이름을 할당할 때`def`와 함께 사용했던 심볼들처럼 말이죠.
 {: ng-show="block61" .description}
 
-> Symbols have to begin with a non-numeric character, and they can
-> contain alphanumeric characters, along with *, +, !, -, _, and ?.
-> This flexibility is important with functions, as there are certain
-> idioms we use.
+> 숫자가 아닌 문자로 시작해야합니다.
+>  *, +, !, -, _, ?와 함께 영숫자 문자를 포함할 수 있습니다.
+> 이러한 유연성은 우리가 사용하는 특정 관용구가 있기 때문에 함수에서 중요합니다.
 {: ng-show="block61" .description}
 
-#### Two types of functions <button class="link" ng-bind-html="details" ng-model="block62" ng-click="block62=!block62"></button>
+#### 함수의 두 가지 유형 <button class="link" ng-bind-html="details" ng-model="block62" ng-click="block62=!block62"></button>
 
-> Clojure has two type of functions:
-> 1. function that returns a value,
-> 2. function that returns true or false.
-> The second type is called *predicate*s.
+> 클로저는 두 가지 유형의 함수가 있습니다:
+> 1. 값을 반환하는 함수,
+> 2. 참거짓을 반환하는 함수.
+> 두 번째 유형의 함수를 *조건자*라고 합니다..
 {: ng-show="block62" .description}
 
 
-##### Predicate function examples <button class="link" ng-bind-html="details" ng-model="block63" ng-click="block63=!block63"></button>
+##### 조건자 함수 예제 <button class="link" ng-bind-html="details" ng-model="block63" ng-click="block63=!block63"></button>
 
-> In Clojure, `=` is a predicate function, which may be a surprising
-> fact. Other than that, like many other computer languages,
-> Clojure has predicate functions to test greater than, less than or such.
-> Mostly predicate functions end with `?`.
+> 클로저에서, `=`는 놀랍게도 조건자 함수입니다.
+> 그 외에도, 다른 많은 컴퓨터 언어들처럼
+> 클로저는 크기 비교를 위한 조건자 함수를 갖고 있습니다.
+> 대부분의 조건자 함수는 `?`로 끝납니다.
 {: ng-show="block63" .description}
 
 > * `=`, `not=`
@@ -175,34 +171,33 @@ Functions
 </section>
 
 <section ng-controller="NarrativeController">
-#### [Bonus section]
+#### [보너스 섹션]
 
-### Functions that take other functions
+### 함수를 인자로 갖는 함수 
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block71" ng-click="block71=!block71">Intro</button>
 
-> Some of the most powerful functions you can use with collections can
-> take other functions as arguments.
-> This is one of the most magical things about Clojure--and many other programming languages.
-> That's a complicated idea, also, may not make sense at first.
-> Let's look at an example and learn more about that.
+> 컬렉션과 함께 사용할 수 있는 가장 강력한 함수들 중 몇몇은
+> 다름 함수를 인자로 가질 수 있습니다.
+> 클로저의 가장 마법같은 부분입니다. --다른 많은 프로그래밍 언어들도 그러하지만
+> 복잡한 아이디어라 처음에 이해가 안 갈 수 있습니다.
+> 예제를 보고 더 공부해봅시다.
 {: ng-show="block71" .description}
 
-> Reference: [Higher-order Function](http://clojurebridge.github.io/community-docs/docs/clojure/higher-order-function/)
+> 참고: [Higher-order Function](http://clojurebridge.github.io/community-docs/docs/clojure/higher-order-function/)
 {: ng-show="block71" .description}
 </section>
 
 <section ng-controller="NarrativeController">
-#### `map` function
+#### `map` 함수
 
 #### <button class="link" ng-bind-html="details" ng-model="block101" ng-click="block101=!block101"></button>
 
-> `map` is a function that takes another function, along with a
-> collection. It calls the function provided to it on each member of
-> the collection, then returns a new collection with the results of
-> those function calls. This is a weird concept, but it is at the core
-> of Clojure and functional programming in general.
+> `map`은 컬렉션과 함께 다른 함수를 인자로 취합니다.
+> 컬렉션의 각 멤버에서 제공된 함수를 호출합니다.
+> 그런 다음 해당 함수 호출의 결과와 함께 새로운 컬렉션을 반환합니다.
+> 생소한 개념이지만, 일반적인 함수형 프로그래밍과 클로저의 핵심입니다.
 {: ng-show="block101" .description}
 
 ```clojure
@@ -210,25 +205,22 @@ Functions
 (map (partial + 90) [0 30 60 90]) ;=> (90 120 150 180)
 ```
 
-> References:
+> 참고:
 > [partial](http://clojuredocs.org/clojure.core/partial)
 </section>
 
 <section ng-controller="NarrativeController">
-#### `reduce` function
+#### `reduce` 함수
 
 #### <button class="link" ng-bind-html="details" ng-model="block111" ng-click="block111=!block111"></button>
 
-> Let's look at another function that takes a function. This one is
-> `reduce`, and it is used to turn collections into a single value.
+> 함수를 인자로 받는 또 다른 함수를 살펴봅시다.
+> `reduce`함수가 있습니다. 컬렉션을 단일 값으로 변환할 때 사용합니다. 
 {: ng-show="block111" .description}
 
-> `reduce` takes the first two members of the provided collection and
-> calls the provided function with those members. Next, it calls the
-> provided function again--this time, using the result of the previous
-> function call, along with the next member of the collection.
-> `reduce` does this over and over again until it finally reaches the
-> end of the collection.
+> `reduce`함수는 제공된 컬렉션의 처음 두 멤버를 받고 그 멤버들에게 제공된 함수를 호출합니다.
+> 그 다음, 제공된 함수를 다시 한번 호출 합니다.-- 이번에는 다음 컬렉션 멤버와 함께 이전 함수 호출의 결과를 이용합니다.
+> `reduce`함수는 이 과정을 컬렉션의 끝에 도달할 때 까지 반복하고 반복합니다. 
 {: ng-show="block111" .description}
 
 ```clojure
@@ -238,7 +230,7 @@ Functions
 </section>
 
 <section>
-#### EXERCISE 3 [BONUS]: Find the average
+#### 연습문제 3 [보너스]: 평균값 찾기
 {: .slide_title .slide}
 
 * Create a function called `average` that takes a vector of maps.
@@ -250,20 +242,20 @@ Functions
 
 
 <section ng-controller="NarrativeController">
-#### [Bonus section]
+#### [보너스 섹션]
 
-### Anonymous functions
+### 익명 함수 Anonymous functions
 
-#### Functions without names <button class="link" ng-bind-html="details" ng-model="block201" ng-click="block201=!block201"></button>
+#### 이름이 없는 함수 <button class="link" ng-bind-html="details" ng-model="block201" ng-click="block201=!block201"></button>
 
-> So far, all the functions we've seen have had names, like `+` and
-> `str` and `reduce`. However, functions don't need to have names, just
-> like values don't need to have names. We call functions without names
-> *anonymous functions*.
-> An anonymous function is created with `fn`, like so:
+> 여태껏, 봐왔던 모든 함수들은 이름을 갖고 있었습니다. `+`, `str`, `reduce`처럼 말이죠.
+> 하지만, 함수는 이름이 꼭 필요하지는 않습니다.
+> 값이 이름을 가질 필요 없듯이요.
+> 이렇게 이름이 없는 함수를 *익명 함수*라고 합니다.
+> 익명 함수는 `fn`으로 생성됩니다. 이렇게 말이죠:
 {: ng-show="block201" .description}
 
-> Reference: [Anonymous Function](http://clojurebridge.github.io/community-docs/docs/clojure/anonymous-function/)
+> 참고: [Anonymous Function](http://clojurebridge.github.io/community-docs/docs/clojure/anonymous-function/)
 {: ng-show="block201" .description}
 
 
@@ -271,12 +263,12 @@ Functions
 (fn [s1 s2] (str s1 " " s2))
 ```
 
-#### vs. not anonymous functions <button class="link" ng-bind-html="details" ng-model="block202" ng-click="block202=!block202"></button>
+#### 익명 함수가 아닌 경우 <button class="link" ng-bind-html="details" ng-model="block202" ng-click="block202=!block202"></button>
 
-> Before we go forward, you should understand that you can _always_
-> feel free to name your functions. There is nothing wrong at all with
-> doing that. However, you _will_ see Clojure code with anonymous
-> functions, so you should be able to understand it.
+> 진도 나가기 전에, 함수명은 _항상_ 자유롭게 지을 수 있다는 걸 이해해야합니다. 
+> 이름을 짓는 것엔 아무 문제가 없습니다.
+> 하지만, 익명 함수로 이루어진 클로저 코드를 _앞으로_ 볼 것입니다.
+> 때문에 익명 함수를 알고 있어야 합니다.
 {: ng-show="block202" .description}
 
 ```clojure
@@ -287,13 +279,12 @@ Functions
 </section>
 
 <section ng-controller="NarrativeController">
-#### Anonymous function usage examples <button class="link" ng-bind-html="details" ng-model="block203" ng-click="block203=!block203"></button>
+#### 익명 함수 사용 예제 <button class="link" ng-bind-html="details" ng-model="block203" ng-click="block203=!block203"></button>
 
-> Why would you ever need anonymous functions?
-> Anonymous functions can be very useful
-> when we have functions that take other functions.
-> Such as `map` or `reduce`, which we learned in Functions section.
-> Let's look at usage examples of anonymous functions:
+> 왜 익명 함수를 씁니까? 
+> 익명 함수는 꽤나 유용합니다.
+> 바로 함수 섹션에서 배운 `map`이나 `reduce`같은 함수들처럼 다른 함수를 인자로 취하는 함수를 가질 때 말입니다.
+> 익명 함수의 사용 예제를 살펴봅시다.
 {: ng-show="block203" .description}
 
 ```clojure
@@ -309,29 +300,27 @@ Functions
 </section>
 
 <section ng-controller="NarrativeController">
-#### [Bonus section]
+#### [보너스 섹션]
 
-### Assignment: `let`
+### 할당하기: `let`
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block301" ng-click="block301=!block301">Intro</button>
 
-> When you are creating functions, you may want to assign names to
-> values in order to reuse those values or make your code more
-> readable. Inside of a function, however, you should _not_ use `def`,
-> like you would outside of a function. Instead, you should use a
-> special form called `let`.
+> 함수를 만들 때, 코드를 읽기 쉽게 하거나 값을 다시 사용하기 위해 값에 이름을 할당하고 싶을 수 있습니다.
+> 하지만 함수 안에서는 함수 밖처럼 `def`을 사용해서는 _안됩니다_.
+> 대신에 `let`이라고 불리는 특별한 양식을 사용해야합니다.
 {: ng-show="block301" .description}
 </section>
 
 <section ng-controller="NarrativeController">
-#### Assigning names to values: `let`
+#### 값에 이름 할당하기: `let`
 {: .slide_title .slide}
 
 #### <button class="link" ng-bind-html="details" ng-model="block305" ng-click="block305=!block305"></button>
 
-> We can assign a name to value using `let` like `def`.
-> When a name is assigned to a value, the name is called a *symbol*.
+> `let`을 `def`처럼 사용해서 값에 이름을 할당할 수 있습니다.
+> 값에 이름을 할당하면, 그 이름일 *심볼*이라고 부릅니다.
 {: ng-show="block305" .description}
 
 > Reference: [Assignment let](http://clojurebridge.github.io/community-docs/docs/clojure/let/)
@@ -346,32 +335,30 @@ Functions
 </section>
 
 <section ng-controller="NarrativeController">
-#### `let` example
+#### `let` 예제
 
 <button class="link" ng-bind-html="details1" ng-model="block311" ng-click="block311=!block311"></button>
 <button class="link" ng-bind-html="details2" ng-model="block312" ng-click="block312=!block312"></button>
 <button class="link" ng-bind-html="details3" ng-model="block313" ng-click="block313=!block313"></button>
 <button class="link" ng-bind-html="exercise" ng-model="block314" ng-click="block314=!block314"></button>
 
-> This is the most complicated function we've seen so far, so let's go
-> through each step. First, we have the name of the function, the
-> documentation string, and the arguments, just as in other functions
+> 여태껏 봐왔던 것들 중에서 가장 복잡합니다. 각 단계를 진행해봅시다.
+> 먼저, 함수의 이름과 함수를 설명하는 문자열과 인자를 갖고 있습니다. 다른 함수들과 같죠.
 {: ng-show="block311" .description}
 
-> Next, we see `let`. `let` takes a vector of alternating names and
-> values. `t1` is the first name, and we assign the result of
-> `(first names)` to it. We also assign the result of `(last names)`
-> to `t2`.
+> 다음엔, `let`이 보입니다. `let`은 이름과 값이 번갈아 나오는 벡터를 취합니다.
+> `t1`이 이름이고,`(이름)`의 결과를 `t1`에 할당합니다.
+> 또 `(성)`의 결과를 `t2`에 할당합니다.
 {: ng-show="block312" .description}
 
-> After the vector of names and values, there is the body of the
-> `let`. Just like a the body of a function, this executes and returns
-> a value. Within the `let`, `t1` and `t2` are defined.
+> 이름과 값의 벡터 다음에, `let`함수의 바디가 있습니다.
+> 여타 함수의 바디처럼 실행하고 값을 반환합니다.
+> `let`안에 `t1`과 `t2`가 정의되어있습니다. 
 {: ng-show="block313" .description}
 
-> Go to `walk.clj` and write `opposite` function.
-> Then, evaluate `opposite` function at the last line of the function definition.
-> Also, evaluate usage example of `opposite` function.
+> `walk.clj`로 이동해서 `opposite`함수를 작성합니다.
+> 그런 다음, 함수 정의의 마지막 줄에서 `opposite`함수를 평가해봅니다. 
+> 또한, `opposite`함수의 사용 예제를 평가해봅니다.
 {: ng-show="block314" .description}
 
 ```clojure
@@ -391,12 +378,12 @@ Functions
 
 {% comment %}
 
-:star2: A link below is for a slide only. Go to [README.md](../README.md)
+:star2: 아래의 링크는 슬라이드 전용입니다. 대신에 [README.md](../README.md)로 가세요.
 instead. :star2:
 
 {% endcomment %}
 
 <section>
-Return to the <a href="javascript:;" onClick="Reveal.slide(1);">first slide</a>,
-or go to the [curriculum outline](/curriculum/#/1).
+<a href="javascript:;" onClick="Reveal.slide(1);">첫번째 슬라이드로 돌아가거나</a>,
+[curriculum outline](/curriculum/#/1)으로 가세요.
 </section>
