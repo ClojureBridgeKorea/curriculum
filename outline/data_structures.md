@@ -27,7 +27,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 
 #### <button class="link" ng-model="block11" ng-click="block11=!block11">Intro</button>
 
-> 지금까지, 데이터 하나하나를 다뤘습니다:숫자,문자열,값.  프로그래밍시에는 데이터들의 묶음을 가지고 작업하는 경우가 더 많습니다.
+> 지금까지, 데이터 하나하나를 다뤘습니다:숫자,문자열,값.  프로그래밍시에는 데이터들의 묶음, 즉 `콜렉션`을 가지고 작업하는 경우가 더 많습니다.
 {: ng-show="block11" .description}
 
 > 클로저는 이러한 데이터들의 *collections*와 함께 작업할 수 있는 훌륭한 기능들을 갖추고 있습니다. 클로저는 네가지의 collections을 제공할 뿐만 아니라 이 모든 collection들을 함께 사용하는 일관된 방법을 제공합니다.
@@ -38,9 +38,9 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 ### Vectors
 {: .slide_title .slide}
 
-#### 순차적인 모음 <button class="link" ng-bind-html="details" ng-model="block21" ng-click="block21=!block21"></button>
+#### 순서가 있는 콜렉션 <button class="link" ng-bind-html="details" ng-model="block21" ng-click="block21=!block21"></button>
 
-> 벡터는 값들의 순차적인 모음입니다. 벡터는 비어있을 수 있습니다. 벡터는 다른 타입의 값들을 담을 수 있습니다. 벡터의 값들은 0에서부터 시작하고 이 숫자를 인덱스라고 합니다. 인덱스는 값들을 참조할 때 사용합니다.
+> 벡터는 순서가 있는 값들의 모음입니다. 벡터는 비어있을 수 있으며, 서로 다른 타입의 값들을 담을 수 있습니다. 벡터의 값들은 순서를 매길때에 0부터 세고, 이 숫자를 인덱스라고 합니다. 인덱스는 값들을 참조할 때 사용합니다.
 {: ng-show="block21" .description}
 
 #### 객실과 비슷한 구조 <button class="link" ng-bind-html="details" ng-model="block22" ng-click="block22=!block22"></button>
@@ -48,7 +48,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 > 벡터를 상상하기 위해서는 일정한 크기의 칸으로 나누어진 박스를 상상해 보세요. 각각의 칸은 수를 가지고 있습니다. 각각의 칸에는 데이터들을 넣을 수 있고 번호가 있기 때문에 어디서 그 데이터를 찾아야 할 지 알 수 있습니다.
 {: ng-show="block22" .description}
 
-> 그 숫자는 0부터 시작되한다는 것을 주의하세요. 이상하게 보일 수도 있지만 프로그래밍시에는 0부터 계산해야 합니다.
+> 그 숫자는 0부터 시작되한다는 것을 주의하세요. 이상하게 보일 수도 있지만 프로그래밍 할 때는 0부터 계산해야 합니다.
 {: ng-show="block22" .description}
 
 ![Vector](img/vector.png)
@@ -239,7 +239,11 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 <section ng-controller="NarrativeController">
 #### 업데이트 <button class="link" ng-bind-html="details" ng-model="block110" ng-click="block110=!block110"></button>
 
-> 맵을 생성한 후 키에 새로운 값을 연결시키기를 원할 수 있습니다. `assoc`함수는 기존의 키에 새로운 값을 추가할 때 사용될 수 있습니다. 또, `update`라는 편리한 함수도 있습니다. `update`는 맵과 키를 함께 사용합니다. 특정한 키는 함수의 첫번째 인자가 됩니다. `update-in`함수는 `update`처럼 작동하지만 중첩된 맵의 경로에서 업데이트하기 위해 키의 벡터가 필요합니다.
+> 맵을 생성한 후 키에 새로운 값을 연결시키기를 원할 수 있습니다. `assoc`함수는 
+> 기존의 키에 새로운 값을 추가할 때 사용될 수 있습니다. 또, `update`라는 편리한 
+> 함수도 있습니다. `update`는 맵과 키를 함께 사용합니다. 특정한 키는 함수의 첫번
+> 째 인자가 됩니다. `update-in`함수는 `update`처럼 작동하지만 중첩된 맵의 경로에
+> 서 업데이트하기 위해 키의 벡터가 필요합니다.
 {: ng-show="block110" .description}
 
 ```clojure
@@ -260,11 +264,13 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 
 
 <section>
-### Collections of Collections
+### Collections of Collection
 
 #### <button class="link" ng-model="block101" ng-click="block101=!block101">Intro</button>
 
-> 수,키워드,문자열과 같은 값들만이 collection에 넣을 수 있는 것은 아닙니다. 다른 collections들도 collection에 넣을 수 있으므로 맵의 벡터, 벡터의 리스트와 같이 데이터에 맞는 조합을 가질 수 있습니다.
+> 수,키워드,문자열과 같은 값들만이 콜렉션에 넣을 수 있는 것은 아닙니다. 다른
+> 콜렉션들도 콜렉션에 넣을 수 있으므로 맵의 벡터, 벡터의 리스트와 같이 
+> 데이터에 맞는 조합을 가질 수 있습니다.
 {: ng-show="block101" .description}
 </section>
 

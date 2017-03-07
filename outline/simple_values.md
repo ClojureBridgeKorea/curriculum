@@ -145,7 +145,7 @@ nil
 <section ng-controller="NarrativeController">
 #### 분수 <button class="link" ng-bind-html="details" ng-model="block101" ng-click="block101=!block101"></button>
 
-> 마지막으로 ratio라고도 불리는 분수가 있습니다. 컴퓨터는 모든 소수를 완벽하
+> 마지막으로 ratio라고도 불리는 분수 데이터 형식이 있습니다. 컴퓨터는 모든 소수를 완벽하
 > 게 표현하지 못하지만 분수는 가능합니다.
 > 분수는 다음과 같이 슬래시를 이용해서 표현합니다:
 {: ng-show="block101" .description}

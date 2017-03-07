@@ -13,7 +13,7 @@ http://clojurebridge.github.io/curriculum/outline/flow_control.html
 {% endcomment %}
 
 <section>
-흐름 제어
+조건문
 -------------------------
 {: .slide-title .chapter}
 
@@ -23,12 +23,12 @@ http://clojurebridge.github.io/curriculum/outline/flow_control.html
 </section>
 
 <section ng-controller="NarrativeController">
-### 흐름제어란?
+### 조건문이란?
 {: .slide_title .slide}
 
 #### 어떻게 반응할지 결정하기 <button class="link" ng-bind-html="details" ng-model="block11" ng-click="block11=!block11"></button>
 
-> "흐름제어"는 주어진 상황에서 어떻게 반응할지를 결정하는 프로그래밍 용어입니다. 우리는 항상 결정을 내립니다. *만약* 날씨가 좋다*면*  공원에 가자;*그렇지 않다면* 실내에서 보드게임을 하자. *만약* 연료가 다 떨어진다*면* 주유소에 가자;*그렇지 않다면* 계속 목적지를 향해 가자.
+> "조건문"은 주어진 상황에서 어떻게 반응할지를 결정하는 프로그래밍 용어입니다. 우리는 항상 결정을 내립니다. *만약* 날씨가 좋다*면*  공원에 가자;*그렇지 않다면* 실내에서 보드게임을 하자. *만약* 연료가 다 떨어진다*면* 주유소에 가자;*그렇지 않다면* 계속 목적지를 향해 가자.
 {: ng-show="block11" .description}
 
 #### 반응하기 위해 조건 평가하기 <button class="link" ng-bind-html="details" ng-model="block12" ng-click="block12=!block12"></button>
@@ -45,7 +45,7 @@ http://clojurebridge.github.io/curriculum/outline/flow_control.html
 ng-click="block21=!block21"></button>
 <button class="link" ng-bind-html="details2" ng-model="block22" ng-click="block22=!block22"></button>
 
-> 클로저에서 흐름제어를 하기 위한 가장 기본적인 방법이 `if`연산자입니다.
+> 클로저에서 조건문을 쓸 때, 가장 기본적으로 `if`연산자를 사용합니다.
 > 다음은 데이터의 유효성을 검증하는 코드의 예제입니다.
 {: ng-show="block21" .description}
 
