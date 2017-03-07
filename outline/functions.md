@@ -21,9 +21,8 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 * 함수명 정하기
 * [보너스 섹션] 함수를 인자로 갖는 함수
     - `map`과 `reduce`
-* [보너스 섹션] 익명 함수 Anonymous function
-* [보너스 섹션] 
-* [보너스 섹션] 할당하기: `let`
+* [보너스 섹션] 익명 함수 Anonymous function 
+* [보너스 섹션] `let`으로 로컬 바인딩하기
 </section>
 
 <section ng-controller="NarrativeController">
@@ -32,12 +31,12 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 #### <button class="link" ng-model="block11" ng-click="block11=!block11">Intro</button>
 
-> `count`, `conj`, `first`, 그턴고  `rest` 같은 몇 가지 함수들을 본 적이 있습니다.
-> 우리가 사용한 모든 산술 연산도 마찬가지로 함수입니다 : `+`, `-`, `*`, `/`
+> `count`, `conj`, `first`,`rest` 같은 몇 가지 함수들을 살펴봤습니다.
+> 마찬가지로, 우리가 사용한 모든 산술 연산도 함수입니다 : `+`, `-`, `*`, `/`
 > 그렇다면 함수란 무엇일까요?
 {: ng-show="block11" .description}
 
-> *함수*란 독립적이고 개별적인 코드로, (*인자*라고 하는) 값을 취하고 값을 반환합니다.
+> *함수*란 독립적이고 개별적인 코드로, (*인자*라고 하는) 값을 받고 값을 반환합니다.
 {: ng-show="block11" .description}
 
 > 참고: [Basics of Function](http://clojurebridge.github.io/community-docs/docs/clojure/function-creation/)
@@ -45,7 +44,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 * `count`, `conj`, `first`
 * `+`, `-`, `*`, `/`
-* 값을 취하고 값을 반환하는 코드
+* 값을 받고 값을 반환하는 코드
 </section>
 
 <section ng-controller="NarrativeController">
@@ -215,11 +214,11 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 #### <button class="link" ng-bind-html="details" ng-model="block111" ng-click="block111=!block111"></button>
 
-> 함수를 인자로 취하는 또 다른 함수를 살펴봅시다.
+> 함수를 인자로 받는 또 다른 함수를 살펴봅시다.
 > `reduce`함수가 있습니다. 컬렉션을 단일 값으로 변환할 때 사용합니다. 
 {: ng-show="block111" .description}
 
-> `reduce`함수는 제공된 컬렉션의 처음 두 멤버를 취하고 그 멤버들에게 제공된 함수를 호출합니다.
+> `reduce`함수는 제공된 컬렉션의 처음 두 멤버를 받고 그 멤버들에게 제공된 함수를 호출합니다.
 > 그 다음, 제공된 함수를 다시 한번 호출 합니다.-- 이번에는 다음 컬렉션 멤버와 함께 이전 함수 호출의 결과를 이용합니다.
 > `reduce`함수는 이 과정을 컬렉션의 끝에 도달할 때 까지 반복하고 반복합니다. 
 {: ng-show="block111" .description}

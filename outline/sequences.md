@@ -119,8 +119,8 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 
 >`dotimes`(**do number of times**) 함수는 시퀀스를 다루는 함수들 중 잘 쓰이는 또 다른 함수입니다.
 >`doseq`함수처럼 반복적으로 주어진 바디를 실행합니다.
-> 차이점은 인자를 취하는 방법입니다.
-> `dotimes`는 `[name의 최대정수]`를 인자로 취합니다.
+> 차이점은 인자를 받는 방법입니다.
+> `dotimes`는 `[name의 최대정수]`를 인자로 받습니다.
 {: ng-show="block41" .description}
 
 
