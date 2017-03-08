@@ -67,7 +67,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 </section>
 
 <section ng-controller="NarrativeController">
-#### `forward-right` 함수 사용 하는 법 <button class="link" ng-bind-html="details" ng-model="block31" ng-click="block31=!block31"></button>
+#### `forward-right` 함수 사용하는 법 <button class="link" ng-bind-html="details" ng-model="block31" ng-click="block31=!block31"></button>
 
 > `forward-right`를 사용하기 위해선, 함수를 *호출*해야 합니다. 앞서 사용해본 함수들을 다뤘던 것처럼 말이죠.
 {: ng-show="block31" .description}
@@ -79,8 +79,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 </section>
 
 <section ng-controller="NarrativeController">
-#### 인자를 여러 개 갖는 함수
-<button class="link" ng-bind-html="details" ng-model="block41" ng-click="block41=!block41"></button>
+#### 인자를 여러 개 갖는 함수 <button class="link" ng-bind-html="details" ng-model="block41" ng-click="block41=!block41"></button>
 
 > 함수는 한 개 이상의 인자를 가질 수 있습니다.
 > turtle과 길이를 인자로 갖는 `forward-right-with-len`함수를 만들어 보겠습니다.
@@ -124,11 +123,11 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 #### 연습문제 2: 인자를 가진 함수를 이용해 거북이 움직이기
 {: .slide_title .slide}
 
-* `walk.clj`로 이동한다.
-* 편집기에서, 3개의 인자를 갖는(turtle, len, and angle) `forward-right-with-len-ang` 함수를 작성한다.(`forward-right-with-len`의 확장판)
-* `forward-right-with-len-ang` 함수 전체를 선택하고 Reload Selection을 누른다.
-* REPL 창에서, `(forward-right-with-len-ang :trinity 60 120)`를 쓴다.
-* REPL에서 함수를 계산하면서 여러 번 반복한다.
+* `walk.clj`로 이동합니다.
+* 편집기에서, 3개의 인자를 갖는(turtle, len, and angle) `forward-right-with-len-ang` 함수를 작성합니다.(`forward-right-with-len`의 확장판)
+* `forward-right-with-len-ang` 함수 전체를 선택하고 Reload Selection을 누릅니다.
+* REPL 창에서, `(forward-right-with-len-ang :trinity 60 120)`를 씁니다.
+* REPL에서 함수를 계산하면서 여러 번 반복합니다.
 
 </section>
 
@@ -139,7 +138,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 #### 이름은 심볼이다 <button class="link" ng-bind-html="details" ng-model="block61" ng-click="block61=!block61"></button>
 
-> 함수명은 심볼입니다. 값에 이름을 할당할 때`def`와 함께 사용했던 심볼들처럼 말이죠.
+> 함수명은 심볼입니다. 값에 이름을 할당할 때 `def`와 함께 사용했던 심볼들처럼 말이죠.
 {: ng-show="block61" .description}
 
 > 숫자가 아닌 문자로 시작해야합니다.
@@ -152,7 +151,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 > 클로저는 두 가지 유형의 함수가 있습니다:
 > 1. 값을 반환하는 함수,
 > 2. 참거짓을 반환하는 함수.
-> 두 번째 유형의 함수를 *조건자*라고 합니다..
+> 두 번째 유형의 함수를 *조건자*라고 합니다.
 {: ng-show="block62" .description}
 
 
@@ -219,7 +218,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 {: ng-show="block111" .description}
 
 > `reduce`함수는 제공된 컬렉션의 처음 두 멤버를 받고 그 멤버들에게 제공된 함수를 호출합니다.
-> 그 다음, 제공된 함수를 다시 한번 호출 합니다.-- 이번에는 다음 컬렉션 멤버와 함께 이전 함수 호출의 결과를 이용합니다.
+> 그 다음, 제공된 함수를 다시 한번 호출 합니다.--이번에는 다음 컬렉션 멤버와 함께 이전 함수 호출의 결과를 이용합니다.
 > `reduce`함수는 이 과정을 컬렉션의 끝에 도달할 때 까지 반복하고 반복합니다. 
 {: ng-show="block111" .description}
 
@@ -233,11 +232,11 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 #### 연습문제 3 [보너스]: 평균값 찾기
 {: .slide_title .slide}
 
-* Create a function called `average` that takes a vector of maps.
-* Use `[{:angle 30} {:angle 90} {:angle 50}]` as input.
-* Calculate average value of :angle.
+* 맵의 벡터를 받는 `average`라는 이름의 함수를 만듭니다.
+* `[{:angle 30} {:angle 90} {:angle 50}]`를 입력으로 사용합니다.
+* :angle의 평균값을 계산합니다.
 
-* Hint: You will need to use the functions `map`, `reduce` and `count`.
+* 힌트: `map`, `reduce`, `count`함수를 이용하세요.
 </section>
 
 
@@ -281,9 +280,9 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 <section ng-controller="NarrativeController">
 #### 익명 함수 사용 예제 <button class="link" ng-bind-html="details" ng-model="block203" ng-click="block203=!block203"></button>
 
-> 왜 익명 함수를 씁니까? 
+> 왜 익명 함수를 쓸까요? 
 > 익명 함수는 꽤나 유용합니다.
-> 바로 함수 섹션에서 배운 `map`이나 `reduce`같은 함수들처럼 다른 함수를 인자로 취하는 함수를 가질 때 말입니다.
+> 바로 함수 섹션에서 배운 `map`이나 `reduce`같은 함수들처럼 다른 함수를 인자로 갖는 함수를 가질 때 말입니다.
 > 익명 함수의 사용 예제를 살펴봅시다.
 {: ng-show="block203" .description}
 
@@ -302,7 +301,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 <section ng-controller="NarrativeController">
 #### [보너스 섹션]
 
-### 할당하기: `let`
+### `let`으로 로컬 바인딩하기
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block301" ng-click="block301=!block301">Intro</button>
@@ -314,13 +313,13 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 </section>
 
 <section ng-controller="NarrativeController">
-#### 값에 이름 할당하기: `let`
+#### `let`으로 로컬 바인딩하기
 {: .slide_title .slide}
 
 #### <button class="link" ng-bind-html="details" ng-model="block305" ng-click="block305=!block305"></button>
 
 > `let`을 `def`처럼 사용해서 값에 이름을 할당할 수 있습니다.
-> 값에 이름을 할당하면, 그 이름일 *심볼*이라고 부릅니다.
+> 값에 이름을 할당하면, 그 이름을 *심볼*이라고 부릅니다.
 {: ng-show="block305" .description}
 
 > Reference: [Assignment let](http://clojurebridge.github.io/community-docs/docs/clojure/let/)
@@ -346,7 +345,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 > 먼저, 함수의 이름과 함수를 설명하는 문자열과 인자를 갖고 있습니다. 다른 함수들과 같죠.
 {: ng-show="block311" .description}
 
-> 다음엔, `let`이 보입니다. `let`은 이름과 값이 번갈아 나오는 벡터를 취합니다.
+> 다음엔, `let`이 보입니다. `let`은 이름과 값이 번갈아 나오는 벡터를 받습니다.
 > `t1`이 이름이고,`(이름)`의 결과를 `t1`에 할당합니다.
 > 또 `(성)`의 결과를 `t2`에 할당합니다.
 {: ng-show="block312" .description}
