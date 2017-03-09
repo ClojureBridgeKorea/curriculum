@@ -1,6 +1,8 @@
 ClojureBridge Curriculum
 ========================
 
+- http://bridge-seoul.clojure.kr/curriculum/#/
+
 Teaching guide
 -------------
 * [ClojureBridge Teacher's Guide](TEACHING.md)
