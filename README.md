@@ -17,7 +17,7 @@ Curriculum
 * [Simple Values](outline/simple_values.md)
 * [Data Structures](outline/data_structures.md)
 * [Functions](outline/functions.md)
-* [Capstone App: Drawing Lines](http://github.com/ClojureBridge/drawing/blob/master/curriculum/first-program.md)
+* [Capstone App: Drawing Lines](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/first-program.md)
 * [Flow Control and Logic](outline/flow_control.md)
 * [[bonus module] Sequences](outline/sequences.md)
 

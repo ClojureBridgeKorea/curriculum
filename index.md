@@ -32,7 +32,7 @@ Please look at [README.md](README.md) instead. :green_heart: :blue_heart:
 * [단순한 값 알아보기](outline/simple_values.html)
 * [데이터 구조](outline/data_structures.html)
 * [함수](outline/functions.html)
-* [어플리케이션 예제 : Drawing Lines](https://github.com/ClojureBridge/drawing/blob/master/curriculum/first-program.md)
+* [어플리케이션 예제 : Drawing Lines](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/first-program.md)
 * [제어문과 로직](outline/flow_control.html)
 * [[보너스] 시퀀스 알아보기](outline/sequences.html)
 

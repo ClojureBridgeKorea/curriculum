@@ -6,7 +6,7 @@ There are many ways to teach the ClojureBridge material, and none of them are "r
 There are six pieces to the curriculum: the curriculum
 [slides and narrative](http://clojurebridge.github.io/curriculum),
 and the capstone app part.1:
-[Drawing Lines](https://github.com/ClojureBridge/drawing/blob/master/curriculum/first-program.md).
+[Drawing Lines](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/first-program.md).
 For capstone app part. 2,
 [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)
 (for function study),
@@ -127,7 +127,7 @@ TODO: add tips under each heading.
   - 60 min
 * [Functions](outline/functions.md)
   - 45-60 min
-* [Capstone App 1](https://github.com/ClojureBridge/drawing/blob/master/curriculum/first-program.md)
+* [Capstone App 1](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/first-program.md)
   - 60 min
 * [Flow Control](outline/flow_control.md)
   - 20 min
