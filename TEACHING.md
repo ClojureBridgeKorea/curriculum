@@ -10,7 +10,7 @@ and the capstone app part.1:
 For capstone app part. 2,
 [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)
 (for function study),
-[Snowflakes](https://github.com/ClojureBridge/drawing/blob/master/curriculum/create-something.md)
+[Snowflakes](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/create-something.md)
 (another drawing app),
 [Twinkle Twinkle Little Star](https://github.com/ClojureBridge/tones/blob/master/curriculum/01-piano-chords.md) (making sounds),
 [Global Growth](https://github.com/ClojureBridge/global-growth)  (web app with REST API),

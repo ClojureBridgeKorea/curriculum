@@ -38,5 +38,5 @@ Please look at [README.md](README.md) instead. :green_heart: :blue_heart:
 * [Flow Control and Logic](outline.v0/flow_control.html)
 * [Capstone App Pt. 1](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/first-program.md)
     * [Repository](https://github.com/ClojureBridge/drawing/blob/master/README.md)
-* [Capstone App Pt. 2](https://github.com/ClojureBridge/drawing/blob/master/curriculum/create-something.md)
+* [Capstone App Pt. 2](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/create-something.md)
 </section>

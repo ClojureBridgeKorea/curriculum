@@ -40,7 +40,7 @@ Please look at [README.md](README.md) instead. :green_heart: :blue_heart:
 
     - [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (함수 스터디)
 
-    - [Snowflakes](https://github.com/ClojureBridge/drawing/blob/master/curriculum/create-something.md) (애니메이션)
+    - [Snowflakes](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/create-something.md) (애니메이션)
 
     - [Twinkle Twinkle Little Star](https://github.com/ClojureBridge/tones/blob/master/curriculum/01-piano-chords.md) (사운드 관련)
     - [Global Growth](https://github.com/ClojureBridge/global-growth)  (웹 어플리케이션,Rest API)

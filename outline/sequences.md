@@ -105,7 +105,7 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 
 * [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (함수 스터디)
     - 섹션 5 이상
-* [Snowflakes](https://github.com/ClojureBridge/drawing/blob/master/curriculum/create-something.md) (애니메이션)
+* [Snowflakes](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/create-something.md) (애니메이션)
     - 4단계 이상
 * [Twinkle Twinkle Little Star](https://github.com/ClojureBridge/tones/blob/master/curriculum/01-piano-chords.md) (사운드 관련)
     - `chord` 함수 이상
@@ -140,7 +140,7 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 
 * [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (함수 스터디)
     - 섹션 6 이상
-* [Snowflakes](https://github.com/ClojureBridge/drawing/blob/master/curriculum/create-something.md) (애니메이션)
+* [Snowflakes](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/create-something.md) (애니메이션)
     - 5-4단계 이상
 * [Twinkle Twinkle Little Star](https://github.com/ClojureBridge/tones/blob/master/curriculum/01-piano-chords.md) (사운드 관련)
     - Twinkle Little Star 섹션 완료하기
