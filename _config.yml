@@ -1,14 +1,13 @@
 # Site settings
-title: ClojureBridge Curriculum
-email: info@clojurebridge.org
+title: 클로저브릿지 커리큘럼
+email: clojurebridge.seoul@gmail.com
 baseurl: /curriculum
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 url: "http://clojurebridge.github.io/"
-twitter_username: ClojureBridge
-github_username:  ClojureBridge
+github_username: ClojureBridgeSeoul
 
 # Build settings
 markdown: kramdown
@@ -30,4 +29,3 @@ exclude:
 
 # Port number
 port: 5555
-

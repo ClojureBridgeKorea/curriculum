@@ -8,7 +8,7 @@ permalink: /index.html
 {::options parse_block_html="true" /}
 
 <section>
-ClojureBridge
+클로저브릿지
 ======================
 {: .slide-title .intro}
 </section>
