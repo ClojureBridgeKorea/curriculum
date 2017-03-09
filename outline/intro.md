@@ -181,7 +181,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 </section>
 
 <section ng-controller="NarrativeController">
-## 실전에서의 REPL in action
+## 실전에서의 REPL
 {: .slide_title .slide}
 
 
@@ -215,11 +215,11 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 <section>
 #### 연습문제 1: Nightcode InstaREPL 기능 해보기
 
-1. Nightcode룰 시작한다.
-2. `myproject`를 들여온다.<br/> (which you created while testing leiningen setup)
-3. `core.clj`를 연다. <br/>(`myproject` -> `src` -> `myproject` -> `core.clj`
-4. __InstREPL__ 버튼을 클릭한다.
-5. 아래에 클로저 함수를 쓰고 지켜본다.
+1. Nightcode룰 시작합니다.
+2. `myproject`를 들여옵니다.<br/> (leiningen 설정 시 만들어 놓은)
+3. `core.clj`를 엽니다. <br/>(`myproject` -> `src` -> `myproject` -> `core.clj`)
+4. __InstREPL__ 버튼을 클릭합니다.
+5. 아래에 클로저 함수를 쓰고 지켜봅니다.
 
 ```clojure
 (print-str "Hello, World!")

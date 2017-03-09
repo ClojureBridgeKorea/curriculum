@@ -72,7 +72,7 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 
 > 클로저는 시퀀스를 *반복*할 때 아주 좋습니다.
 > 시퀀스를 다루는 많은 함수들이 있습니다.
-> 예를 들어, `doseq`, `dotimes`, `for`, `loop`, `doall`, or `dorun`.
+> 예를 들어, `doseq`, `dotimes`, `for`, `loop`, `doall`,`dorun` 함수들이 있습니다.
 > `map`과 `reduce` 함수를 이미 "함수를 인자로 갖는 함수" 섹션에서 보았습니다.
 > 이것들 또한 시퀀스를 다루는 함수 입니다.
 {: ng-show="block21" .description}
@@ -103,11 +103,11 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 <section>
 #### 연습문제 1
 
-* [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (더 많은 함수 공부하기)
+* [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (함수 스터디)
     - 섹션 5 이상
 * [Snowflakes](https://github.com/ClojureBridge/drawing/blob/master/curriculum/create-something.md) (애니메이션)
     - 4단계 이상
-* [Twinkle Twinkle Little Star](https://github.com/ClojureBridge/tones/blob/master/curriculum/01-piano-chords.md) (소리 만들기)
+* [Twinkle Twinkle Little Star](https://github.com/ClojureBridge/tones/blob/master/curriculum/01-piano-chords.md) (사운드 관련)
     - `chord` 함수 이상
 </section>
 
@@ -138,11 +138,11 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 <section>
 #### 연습문제 2
 
-* [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (더 많은 함수 공부하기)
+* [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (함수 스터디)
     - 섹션 6 이상
 * [Snowflakes](https://github.com/ClojureBridge/drawing/blob/master/curriculum/create-something.md) (애니메이션)
     - 5-4단계 이상
-* [Twinkle Twinkle Little Star](https://github.com/ClojureBridge/tones/blob/master/curriculum/01-piano-chords.md) (소리 만들기)
+* [Twinkle Twinkle Little Star](https://github.com/ClojureBridge/tones/blob/master/curriculum/01-piano-chords.md) (사운드 관련)
     - Twinkle Little Star 섹션 완료하기
 </section>
 
