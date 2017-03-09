@@ -64,11 +64,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 </section>
 
 <section ng-controller="NarrativeController">
-<<<<<<< HEAD
-## 클로저로 하기 좋은 것
-=======
 ## 클로저의 장점은?
->>>>>>> korean
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block21" ng-click="block21=!block21">Intro</button>
@@ -101,11 +97,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 </section>
 
 <section ng-controller="NarrativeController">
-<<<<<<< HEAD
-## 클로저의 생김새
-=======
 ## 클로저는 어떻게 생겼나?
->>>>>>> korean
 {: .slide_title .slide}
 
 ```clojure
@@ -169,11 +161,8 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 </section>
 
 <section>
-<<<<<<< HEAD
-## REPL이 뭘까?
-=======
+
 ## REPL이란?
->>>>>>> korean
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block51" ng-click="block51=!block51">Intro</button>
