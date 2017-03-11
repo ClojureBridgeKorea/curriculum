@@ -1,0 +1,39 @@
+/*
+* 나눔스퀘어
+* Nanum Square
+*
+* SIL Open Font License 1.1
+* http://help.naver.com/ops/step2/faq.nhn?faqId=15879
+*/
+
+@font-face {
+  font-family: 'Nanum Square';
+  src: local('Nanum Square'), local('nanumquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  src: local('Nanum Square'), local('nanumquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Regular.ttf') format('truetype'), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  src: local('Nanum Square'), local('nanumquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Bold.ttf') format('truetype'), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  src: local('Nanum Square'), local('nanumquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+.reveal {
+  font-family: 'Nanum Square', sans-serif;
+}
