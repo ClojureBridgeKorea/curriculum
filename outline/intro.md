@@ -64,13 +64,13 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 </section>
 
 <section ng-controller="NarrativeController">
-## 클로저가 뛰어난 영역은?
+## 클로저의 장점은?
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block21" ng-click="block21=!block21">Intro</button>
 
 > 앞에서 우리는 클로저가 범용 언어라고 했습니다.
-> 그것이 클로저가 뛰어난 영역이 없다는 의미는 아닙니다.
+> 그것이 클로저가 뛰어난 면이 없다는 의미는 아닙니다.
 {: ng-show="block21" .description}
 
 #### 데이터 처리 <button class="link" ng-bind-html="details" ng-model="block22" ng-click="block22=!block22"></button>
@@ -89,9 +89,9 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 > 클로저는 컴퓨터에게 내리는 이런 종류의 명령을 쉽게 작성하는 방법을 제공합니다.
 {: ng-show="block23" .description}
 
-#### 모든 영역에도 다 좋아요! <button class="link" ng-bind-html="details" ng-model="block24" ng-click="block24=!block24"></button>
+#### 다 좋습니다! <button class="link" ng-bind-html="details" ng-model="block24" ng-click="block24=!block24"></button>
 
-> 클로저는 Quil를 이용해 그리기 애플리케이션을 만드는 데에도 좋습니다. 이 작업은 우리가 함께 해보게 될 겁니다.
+> 또한 클로저는 Quil를 이용해 그리기 애플리케이션을 만드는 데에도 좋습니다. 이 작업은 우리가 함께 해보게 될 겁니다.
 > [Quil](https://github.com/quil/quil)
 {: ng-show="block24" .description}
 </section>
@@ -207,7 +207,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 
 <!-- TODO project_name should probably be defined somewhere, right? -->
 > Nightcode는 하나의 파일 전체 내지는 하나의 프로그램 전체로 또는 줄 단위로도 평가하게 해줍니다.
-> Nightcode에서, REPL가 시작된 후, "Realod File" 과 "Reload Selection"이 작동합니다.
+> Nightcode에서, REPL이 시작된 후, "Realod File" 과 "Reload Selection"이 작동합니다.
 {: ng-show="block63" .description}
 </section>
 
