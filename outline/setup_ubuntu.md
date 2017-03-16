@@ -285,5 +285,5 @@ java -jar Nightcode-2.1.0.jar
 싶으면, [Turtle App
 API](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md)와
 [How to Walk
-Turtles](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)를
+Turtles](https://github.com/ClojureBridgeSeoul/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)를
 참조하세요.

@@ -38,7 +38,7 @@ Please look at [README.md](README.md) instead. :green_heart: :blue_heart:
 
 * 추가 어플리케이션 예제들
 
-    - [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (함수 스터디)
+    - [Turtles Walk](https://github.com/ClojureBridgeSeoul/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (함수 스터디)
 
     - [Snowflakes](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/create-something.md) (애니메이션)
 

@@ -25,7 +25,7 @@ Curriculum
 
 Choices of Capstone App - Part. 2
 ----------------
-* [Turtles Walk](http://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (more function study)
+* [Turtles Walk](http://github.com/ClojureBridgeSeoul/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (more function study)
 * [Snowflakes](http://github.com/ClojureBridge/drawing/blob/master/curriculum/create-something.md) (animation)
 * [Twinkle Twinkle Little Star](http://github.com/ClojureBridge/tones/blob/master/curriculum/01-piano-chords.md) (making sounds)
 * [Global Growth](http://github.com/ClojureBridge/global-growth)  (web app with REST api)

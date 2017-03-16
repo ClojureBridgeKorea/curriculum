@@ -239,7 +239,7 @@ REPL이 시작되면 `user=>` 프롬프트가 나타날 것입니다.
 
 축하합니다! 처음으로 클로저 응용 프로그램을 열고 실행해 보았고, 설치와 설정이 모두 끝났습니다!
 
-거북이(작은 삼각형)가 무엇을 할 수 있는지 더 알고싶다면 [Turtle App API](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md) 와 [How to Walk Turtles](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)을 읽어보세요.
+거북이(작은 삼각형)가 무엇을 할 수 있는지 더 알고싶다면 [Turtle App API](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md) 와 [How to Walk Turtles](https://github.com/ClojureBridgeSeoul/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)을 읽어보세요.
 
 
 ## 문제 해결하기

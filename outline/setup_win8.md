@@ -238,7 +238,7 @@ Like we did before, click "Reload" button.
 
 축하합니다! 첫 Clojure 앱을 열어 실행하였고, 설치와 설정이 모두 완료되었습니다!
 
-거북이(*작은 화살표*)가 무엇을 할 수 있는지 알고 싶다면, [Turtle App API](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md) 와 [How to Walk Turtles](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) 를 보도록 하세요.
+거북이(*작은 화살표*)가 무엇을 할 수 있는지 알고 싶다면, [Turtle App API](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md) 와 [How to Walk Turtles](https://github.com/ClojureBridgeSeoul/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) 를 보도록 하세요.
 
 ### Troubleshooting
 

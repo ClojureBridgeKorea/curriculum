@@ -8,7 +8,7 @@
 과 캡스톤 앱 part.1:
 [선 그리기](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/first-program.md).
 캡스톤 앱을 위한 part. 2,
-[거북이 걸음](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)
+[거북이 걸음](https://github.com/ClojureBridgeSeoul/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)
 (함수 학습),
 [눈꽃 그리기](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/create-something.md)
 ,

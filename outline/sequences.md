@@ -103,7 +103,7 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 <section>
 #### 연습문제 1
 
-* [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (함수 스터디)
+* [Turtles Walk](https://github.com/ClojureBridgeSeoul/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (함수 스터디)
     - 섹션 5 이상
 * [Snowflakes](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/create-something.md) (애니메이션)
     - 4단계 이상
@@ -138,7 +138,7 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 <section>
 #### 연습문제 2
 
-* [Turtles Walk](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (함수 스터디)
+* [Turtles Walk](https://github.com/ClojureBridgeSeoul/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md) (함수 스터디)
     - 섹션 6 이상
 * [Snowflakes](https://github.com/ClojureBridgeSeoul/drawing/blob/korean/curriculum/create-something.md) (애니메이션)
     - 5-4단계 이상

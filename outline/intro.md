@@ -251,7 +251,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 * `(right 90)`을 쓰고 REPL 창 하단의 "enter"를 누릅니다![Run with REPL pane](img/run-with-repl.png)
 * 거북이가 어떻게 되는지 확인합니다.
 * 이 둘을 살펴보고 [Turtles App API](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md)와
-[How To Walk Turtles](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)
+[How To Walk Turtles](https://github.com/ClojureBridgeSeoul/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)
 [section 1 and 2], 거북이를 움직이게 할 명령어를 시도해봅니다.
 </section>
 

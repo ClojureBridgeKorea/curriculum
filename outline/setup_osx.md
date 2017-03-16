@@ -268,4 +268,4 @@ java -jar Nightcode-2.1.0.jar
 
 거북이(*작은 삼각형*)에 대해 더 궁금하시다면,
 [Turtle App API](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md)과
-[How to Walk Turtles](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)를 참고하세요
+[How to Walk Turtles](https://github.com/ClojureBridgeSeoul/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)를 참고하세요
