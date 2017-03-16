@@ -2,3 +2,8 @@
 .ruby-gemset
 _site
 .sass-cache
+
+
+*~
+*#
+.#*
