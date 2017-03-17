@@ -11,7 +11,7 @@ windows 7 설치
 * 문제 해결하기
 
 ## 명령 프롬프트 열기
-이 설명과 수업을 진행하기 위해서는 명령 프롬프트를 열어야 합니다. 명령 프롬프트는 컴퓨터에 명령하기 위한 텍스트 기반의 인터페이스입니다. 시작메뉴에서 검색창에 "command"를 입력하고 다음 스크린샷에 보이는 것처럼 "Command Prompt"프로그램을 선택하세요:
+이 설명과 수업을 진행하기 위해서는 명령 프롬프트를 열어야 합니다. 명령 프롬프트는 컴퓨터에 명령하기 위한 텍스트 기반의 인터페이스입니다. 시작 메뉴에서 검색창에 "command"를 입력하고 다음 스크린샷에 보이는 것처럼 "Command Prompt" 프로그램을 선택하세요:
 
 ![명령 프롬프트 열기](img/win7/starting-command-prompt.png)
 
@@ -31,29 +31,29 @@ windows 7 설치
 설치 후에 새로운 명령 프롬프트에서 `git --version`명령을 실행하세요. 버전 넘버가 보인다면 제대로 설치된 것입니다.
 
 `'git' is not recognized as an internal or external command`라는 메시지가 보인다면, 
-PATH 변수를 적절히 업데이트하기 위해 다음 스텝을 따라하세요:
-* "My Computer"을 우클릭 한 후 "Properties"를 선택하세요.
+PATH 변수를 적절히 업데이트하기 위해 다음 단계를 따라 하세요:
+* "My Computer"를 우클릭 한 후 "Properties"를 선택하세요.
 * "Advanced Tab"을 클릭한 다음 "Environment Variables"를 클릭하세요.
 * PATH 항목을 선택한 다음 "Edit"을 클릭하세요.
 * 밑으로 스크롤 하면서 "...\Git..."을 포함하는 파일 경로가 있는지 체크하세요.
 * 경로가 존재한다면:
-  * "My Computer"창이 닫힐 때까지 "Okay"를 클릭하세요.
-  * 새로운 명령 프롬프트 창을 열어서 `git --version`을 다시 실행해보세요. 만약 실패한다면 컴퓨터를 다시 시작해서 재시도 해보세요.
+  * "My Computer" 창이 닫힐 때까지 "Okay"를 클릭하세요.
+  * 새로운 명령 프롬프트 창을 열어서 `git --version`을 다시 실행해 보세요. 만약 실패한다면 컴퓨터를 다시 시작해서 재시도해 보세요.
 * 경로가 존재하지 않는다면:
   * 설치 중에 git의 설치 위치를 변경하지 않았다면 줄의 끝에 ";C:\Program Files (x86)\Git\cmd"를 추가하세요. 파일 경로 사이에 세미콜론을 추가하세요. 줄 사이에는 공백이 없어야 합니다.
-  * "My Computer"창이 닫힐 때까지 "Okay"를 클릭하세요.
-  * 새로운 명령 프롬프트 창을 열어서 `git --version`을 다시 실행해보세요. 만약 실패한다면 컴퓨터를 다시 시작해서 재시도 해보세요.
+  * "My Computer" 창이 닫힐 때까지 "Okay"를 클릭하세요.
+  * 새로운 명령 프롬프트 창을 열어서 `git --version`을 다시 실행해보세요. 만약 실패한다면 컴퓨터를 다시 시작해서 재시도해 보세요.
 
 ## Git 환경설정하기
 
-Git을 써본 적이 있다면 이미 user.name과 user.email이 설정되어 있을 것입니다.
+Git을 써본 적이 있다면 이미 `user.name`과 `user.email`이 설정되어 있을 것입니다.
 그렇지 않다면, 다음을 명령 프롬프트에 입력하세요:
 
 ```
 git config --global user.name "Your Actual Name"
 git config --global user.email "Your Actual Email"
 ```
-팁: git, github, ssh에서 같은 이메일주소를 사용하세요.
+팁: git, github, ssh에서 같은 이메일 주소를 사용하세요.
 
 명령 프롬프트에 다음 내용을 입력하여 확인하세요:
 
@@ -84,7 +84,7 @@ Expected result:
 
 "System Type" 옆에서 32비트 또는 64비트 중 어느 것을 사용하고 있는지 확인하세요.
 
-올바른 Java버전을 다운받았다면 다운받은 실행 파일을 실행하여 Java를 설치하세요. 설치마법사를 따라하세요.
+올바른 Java버전을 다운받았다면 다운받은 실행 파일을 실행하여 Java를 설치하세요. 설치 마법사를 따라하세요.
 
 ## Leiningen 설치하기
 
@@ -125,7 +125,7 @@ java -jar Nightcode-2.1.0.jar
 lein new myproject
 ```
 
-이 명령어는 `myproject`라는 클로저프로젝트를 구성하는 파일이 있는 새로운 프로젝트를 생성합니다. 
+이 명령어는 `myproject`라는 클로저 프로젝트를 구성하는 파일이 있는 새로운 프로젝트를 생성합니다. 
 보통 클로저 코드는 이러한 클로저 프로젝트 안에 존재합니다.
 
 다음 명령을 실행해 보세요:
@@ -145,12 +145,12 @@ REPL은 클로저를 위한 특별한 터미널입니다.
 
 REPL 프롬프트에서 `(+1 1)`을 입력하고 엔터키를 눌러보세요. 정답인 `2`를 얻었나요? 훌륭합니다!
 
-당신의 leiningen 설치는 괜찮아보입니다. 이제 키보드에서 컨트롤버튼과 D버튼을 동시에 눌러보세요(단축키 : Ctrl+D). 이 단축키는 클로저 REPL에서 나와 원래의 터미널 프롬프트로 되돌려줍니다. 그러면 터미널에서는 다음 메세지를 표시할 것입니다: `user=> Bye for now!`
+당신의 leiningen 설치는 괜찮아 보입니다. 이제 키보드에서 컨트롤 버튼과 D 버튼을 동시에 눌러보세요(단축키 : Ctrl+D). 이 단축키는 클로저 REPL에서 나와 원래의 터미널 프롬프트로 되돌려 줍니다. 그러면 터미널에서는 다음 메세지를 표시할 것입니다: `user=> Bye for now!`
 
 
 #### github 저장소 복제하기
 
-새로운 명령 프롬프트창을 열어 다음 명령을 실행해 보세요:
+새로운 명령 프롬프트 창을 열어 다음 명령을 실행해 보세요:
 
 ```bash
 git clone https://github.com/ClojureBridge/welcometoclojurebridge
@@ -193,7 +193,7 @@ java -jar Nightcode-2.1.0.jar
 #### 앱 테스트하기
 
 이제 우리는 Nightcode에서 클로저의 샘플 앱들을 열고 실행해 볼 것입니다.
-왼쪽 상단 구석에서 "Import"를 클릭하고 `git clone`명령을 실행할 때 생성 된 `welcometoclojurebridge`의 디렉토리를 찾고 "Open"을 클릭하세요. 왼쪽의 프로젝트 폴더 트리에서 `src` - `welcometoclojurebridge` - `core.clj`를 클릭하세요. `core.clj`파일은 오른쪽에 열릴 것입니다.
+왼쪽 상단 구석에서 "Import"를 클릭하고 `git clone` 명령을 실행할 때 생성 된 `welcometoclojurebridge`의 디렉토리를 찾고 "Open"을 클릭하세요. 왼쪽의 프로젝트 폴더 트리에서 `src` - `welcometoclojurebridge` - `core.clj`를 클릭하세요. `core.clj`파일은 오른쪽에 열릴 것입니다.
 이것이 클로저 프로그램입니다.
 
 ![Testing apps - click import](img/nightcode-click-import.png)
@@ -229,7 +229,7 @@ REPL이 시작되면 `user=>` 프롬프트가 나타날 것입니다.
 중앙에 있는 작은 삼각형이 *거북이*입니다.
 
 
-창 하단의 repl에 `(forward 40)`을 입력하세요.
+창 하단의 REPL에 `(forward 40)`을 입력하세요.
 거북이가 위로 움직이는 것을 볼 수 있을 것입니다:
 
 ![Testing apps - forward](img/nightcode-turtle-forward-40.png)
@@ -253,7 +253,7 @@ REPL이 시작되면 `user=>` 프롬프트가 나타날 것입니다.
   에러메세지가 다음과 같다면 <http://stackoverflow.com/a/21383865>를 확인하세요.
   
 
-  이 에러는 Relevant Knowledge라고 불리는 일종의 스파이웨어가 트래픽을 차단하면서 `lein`명령이 필요한 내용을 다운로드 할 수 없기 때문에 발생합니다.
+  이 에러는 Relevant Knowledge라고 불리는 일종의 스파이웨어가 트래픽을 차단하면서 `lein` 명령이 필요한 내용을 다운로드 할 수 없기 때문에 발생합니다.
   이 문제를 해결하기 위해서는 Relevant Knowledge를 삭제해야 합니다.
   이는 유저(소유자 혹은 관리자)의 비밀번호가 필요합니다.
   종종 학생들은 이러한 권한에 대해서 들어본 적이 없을 수 있습니다.

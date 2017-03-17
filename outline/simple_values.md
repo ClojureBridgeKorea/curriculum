@@ -27,7 +27,7 @@ Simple Values
 </section>
 
 <section>
-## Simple Values
+## 단순값(Simple Values)
 
 #### <button class="link" ng-model="block71" ng-click="block71=!block71">Intro</button>
 
@@ -43,8 +43,8 @@ Simple Values
 #### <button class="link" ng-bind-html="details" ng-model="block21" ng-click="block21=!block21"></button>
 
 > string은 무엇일까요? string은 문자열입니다. string을 만들기 위해서는
-> " "로 문장을 감싸야 합니다.
-> 다음 예제를 봅시다. 역슬래시는 문자열에서 " "을 어디에 두어야 하는지를 보여주고있습니다.
+> 이중 따옴표(`"`)로 문장을 감싸야 합니다.
+> 다음 예제를 봅시다. 역슬래시는 문자열 안에서 이중 따옴표 기호를 포함하고 싶을 때 사용합니다.
 {: ng-show="block21" .description}
 
 > 참조: [String](http://clojurebridge.github.io/community-docs/docs/clojure/string/)
@@ -65,14 +65,14 @@ Simple Values
 
 > boolean은 참값 혹은 거짓값을 가지며 단순하게 `true` `false`를 입력하면 
 > 됩니다.
-> 프로그래밍에선 종종 "이번학기에 이 수업이 열리나요?"나 "오늘이 생일이니
+> 프로그래밍에선 종종 "이번 학기에 이 수업이 열리나요?"나 "오늘이 생일이니
 > ?"와 같이 참 혹은 거짓을 물어볼 때가 있습니다.
-> 이때 우리는 boolean값을 얻게 됩니다.
+> 이때 우리는 boolean값을 반환받게 됩니다.
 {: ng-show="block31" .description}
 
-> 또다른 값으로는 `nil`이 있는데 이것은 __truthiness__라는 의미로 boolean
-> 처럼 사용이 됩니다.
-> 하지만 `nil`은 아무런 가치가 없고 단지 boolean이란 것만 의미합니다.
+> 또다른 값으로는 `nil`이 있는데, 이것은 논리적 참(truthiness)이라는 의미에서는 boolean의 false 값
+> 처럼 사용됩니다.
+> 하지만 `nil`은 원래 값이 없음을 의미하고, 엄밀한 의미에서 boolean은 아닙니다.
 {: ng-show="block31" .description}
 
 > 참조: [Truthiness](http://clojurebridge.github.io/community-docs/docs/clojure/truthiness/)
@@ -92,13 +92,13 @@ nil
 
 #### <button class="link" ng-bind-html="details" ng-model="block41" ng-click="block41=!block41"></button>
 
-> keyworld는 기본적인 값들중 가장 이상한 타입입니다. 몇몇 컴퓨터언어에서도 
-> 이와 비슷한 것을 가집니다. 하지만 number,string,boolean처럼 
-> real world analog를 가지지는 않습니다.
+> keyworld는 기본적인 타입들 중 가장 이상한 타입입니다. 몇몇 컴퓨터 언어에서도 
+> 이와 비슷한 것이 있습니다. 하지만 number, string, boolean 타입처럼 
+> 이해하기 쉬운 것은 아닙니다.
 > keyworld는 레이블처럼 사용되는 일종의 특별한 문자열이라고 생각하면 
 > 됩니다.
 > keyworld는 maps(자료구조;다음에 배울예정)의 key-value pair에서 키값으로
-> 사용됩니다.
+> 주로 사용됩니다.
 {: ng-show="block41" .description}
 
 
@@ -114,11 +114,11 @@ nil
 
 #### 정수 <button class="link" ng-bind-html="details" ng-model="block81" ng-click="block81=!block81"></button>
 
-> 클로저는 여러종류의 숫자 타입을 가집니다.
+> 클로저는 여러 종류의 숫자 타입을 가집니다.
 {: ng-show="block81" .description}
 
-> 첫번째는 정수타입입니다. 정수는 0을 포함한 양수,음수로 구성되어 있으며 
-> 평상시에 쓰는것처럼 사용하면됩니다.
+> 첫번째는 정수 타입입니다. 정수는 0을 포함한 양수, 음수로 구성되어 있으며 
+> 평상시에 쓰는 것처럼 사용하면 됩니다.
 {: ng-show="block81" .description}
 
 ```clojure
@@ -150,7 +150,7 @@ nil
 > 분수는 다음과 같이 슬래시를 이용해서 표현합니다:
 {: ng-show="block101" .description}
 
-> 실제 수학과 마찬가지로 분수의 [분모](http//en.wikipedia.org/wiki/Fraction_%28mathematics%29)는 절대 0이 될 수 없음을 주의하세요.
+> 실제 수학에서와 마찬가지로 분수의 [분모](http//en.wikipedia.org/wiki/Fraction_%28mathematics%29)는 절대 0이 될 수 없음을 주의하세요.
 {: ng-show="block101" .description}
 
 ```clojure
@@ -160,12 +160,12 @@ nil
 </section>
 
 <section>
-### 산술연산
+### 산술 연산
 {: .slide_title .slide}
 
 #### <button class="link" ng-model="block111" ng-click="block111=!block111">Intro</button>
 
-> 우리는 수들을 더하고,빼고,곱하고 나누는 것이 가능합니다. 클로저에서는 이
+> 우리는 수들을 더하고,ㅠ빼고, 곱하고 나누는 것이 가능합니다. 클로저에서는 이
 > 러한 연산이 실제 우리가 종이에 쓰는 방식과는 조금 차이가 있습니다. 다음 예
 > 제를 봅시다:  
 {: ng-show="block111" .description}
@@ -185,15 +185,15 @@ nil
 <button class="link" ng-bind-html="details1" ng-model="block121" ng-click="block121=!block121"></button>
 <button class="link" ng-bind-html="details2" ng-model="block122" ng-click="block122=!block122"></button>
 
-> 클로저에서는 `+`,`-`,`*`,`/`가 피연산자들 앞에 위치합니다. 이런 것을 _pre
-> fix 표기법_이라고 합니다. 우리가 주로 보는 두 피연산자 사이에 연산자가 위
-> 치하는 것은 _infix 표기법_이라고 합니다.
+> 클로저에서는 `+`, `-`, `*`, `/`가 피연산자들 앞에 위치합니다. 이런 것을 _pre
+> fix(전위) 표기법_이라고 합니다. 우리가 주로 보는, 두 피연산자 사이에 연산자가 위
+> 치하는 것은 _infix(중위) 표기법_이라고 합니다.
 {: ng-show="block121" .description}
 
-> **JavaScript**같은 것은 **infix**표기법을 사용합니다.
+> **JavaScript**같은 언어는 **infix**표기법을 사용합니다.
 > **Clojure**에선 **prefix**표기법만을 사용합니다.
-> Prefix 표기법은 많은 이유에서 유용합니다. 다음 예제는 infix표현과 그와 동
-> 일한 prefix표현을 보여줍니다:
+> Prefix 표기법은 많은 이유에서 유용합니다. 다음 예제는 infix 표현과 그와 동
+> 일한 prefix 표현을 보여줍니다:
 {: ng-show="block122" .description}
 
 ```clojure
@@ -208,10 +208,10 @@ Prefix: (+ (- (+ (+ 1 (/ (* 2 3) 4)) 5) (/ (* 6 7) 8)) 9)
 
 #### 명확한 우선순위 <button class="link" ng-bind-html="details" ng-model="block131" ng-click="block131=!block131"></button>
 
-> 명확하게 보이지는 않지만 prefix버전에서 우린 더이상 연산자의 우선순위를
-> 생각 할 필요가 없다는 것에 주목하세요. 
-> 모든 표현식이 모든 피연산자 앞에 연산자를 가지며 전체 표현식이 괄호 안
-> 에 싸여있기 때문에 모든 우선순위가 명시적입니다.
+> 명확하게 보이지는 않지만, prefix버전에서 더 이상 연산자의 우선순위를
+> 생각할 필요가 없다는 것에 주목하세요. 
+> 모든 표현식이, 피연산자 앞에 연산자를 가지며, 전체 표현식이 괄호 안
+> 에 싸여있기 때문에 우선순위가 모두 명시적입니다.
 {: ng-show="block131" .description}
 
 ```clojure
@@ -223,7 +223,7 @@ Prefix: (+ 1 (/ 2 3))
 
 > prefix 표기법이 더 좋은 다른 이유는 긴 표현을 덜 반복적으로 만들 수 있
 > 다는 것입니다.
-> 만약 다수의 피연산자에 대해 동일한 연산을 하려할 때 prefix표기법에선 연
+> 만약 다수의 피연산자에 대해 동일한 연산을 하려할 때 prefix 표기법에서는 연
 > 산자들을 반복해서 쓸 필요가 없습니다.
 {: ng-show="block132" .description}
 
@@ -238,8 +238,8 @@ Prefix: (+ 1 2 3 4 5 6 7 8 9)
 
 <button class="link" ng-bind-html="details" ng-model="block141" ng-click="block141=!block141"></button>
 
-> 지금까지 정수에 대해서만 산술연산을 해보았습다.
-> 하지만 이러한 연산자들을 소수와 분수에 대해서 사용하기도 합니다.
+> 지금까지 정수에 대해서만 산술 연산을 해보았습니다.
+> 하지만, 이러한 연산자들을 소수와 분수에 대해서 사용할 수도 있습니다.
 > 다음 예를 봅시다:
 {: ng-show="block141" .description}
 
@@ -257,7 +257,7 @@ Prefix: (+ 1 2 3 4 5 6 7 8 9)
 #### <button class="link" ng-model="block161" ng-click="block161=!block161">Intro</button>
 
 > 만약 같은 값을 반복해서 입력해야 한다면 프로그램을 작성하는 것이 매우
-> 어려울 것입니다. 그렇기 때문에 값에 대한 이름이 필요하고 우리가 기억할 수
+> 어려울 것입니다. 그렇기 때문에 값에 대한 이름이 필요하고, 우리가 기억할 수
 > 있는 방식으로 그것들을 참조할 수 있습니다. 이것을 할당한다라고 합니다.
 {: ng-show="block161" .description}
 </section>
@@ -286,21 +286,22 @@ Prefix: (+ 1 2 3 4 5 6 7 8 9)
 #### 결과값에 symbol지정하기 <button class="link" ng-bind-html="details" ng-model="block181" ng-click="block181=!block181"></button>
 
 > symbol에는 단순한 값 이상을 할당할 수 있습니다. 다음을 봅시다.
-> 다음줄에서는 값을 참조하는데 어떻게 symbol을 사용하는지를 보여주고있습니다.
+> 다음 줄에서는 값을 참조하는데, 어떻게 symbol을 사용하는지를 보여주고있습니다.
 {: ng-show="block181" .description}
 
 ```clojure
 (def fruit (+ mangoes oranges))
 (def average-fruit-amount (/ fruit 2))
+
 average-fruit-amount
 ;=> 4
 ```
 </section>
 
 <section>
-#### 연습문제 1: Basic arithmetic
+#### 연습 문제 1: Basic arithmetic
 
-* 오늘 워크샵에 도착한 이후로 몇분이나 지났나요?
+* 오늘 워크샵에 도착한 이후로 몇 분이나 지났나요?
 * 이 값을 분에서 초로 변환하세요.
 </section>
 
