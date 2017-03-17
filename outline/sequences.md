@@ -31,7 +31,7 @@ http://clojurebridge.github.io/curriculum/outline/sequences.html
 
 #### 클로저의 자료구조 <button class="link" ng-bind-html="details" ng-model="block11" ng-click="block11=!block11"></button>
 
-> 클로저에서는, 모든 자료구조를 시퀀스로 할 수 있습니다.
+> 클로저에서는, 모든 자료구조를 시퀀스로 말할 수 있습니다.
 > 앞서, `벡터`와 `맵`이 전부 시퀀스라고 배웠습니다.
 > 문자열도 역시 시퀀스이며, **seq로 다룰 수 있는 것**들은 전부 시퀀스입니다.
 {: ng-show="block11" .description}
@@ -70,7 +70,7 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 ### 시퀀스를 다루는 함수들
 <button class="link" ng-bind-html="details" ng-model="block21" ng-click="block21=!block21"></button>
 
-> 클로저는 시퀀스를 *반복*할 때 아주 좋습니다.
+> 클로저는 시퀀스의 요소들을 *반복*해서 처리하는 데에 아주 능합니다.
 > 시퀀스를 다루는 많은 함수들이 있습니다.
 > 예를 들어, `doseq`, `dotimes`, `for`, `loop`, `doall`,`dorun` 함수들이 있습니다.
 > `map`과 `reduce` 함수를 이미 "함수를 인자로 갖는 함수" 섹션에서 보았습니다.
@@ -84,14 +84,14 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 <button class="link" ng-bind-html="details1" ng-model="block31" ng-click="block31=!block31"></button>
 <button class="link" ng-bind-html="details2" ng-model="block32" ng-click="block32=!block32"></button>
 
-> `doseq`(**do sequence**)는 시퀀스를 다루는 함수들 중 잘 쓰이는 함수들 중 하나입니다.
+> `doseq`(**do sequence**)은 시퀀스를 다루는 함수들 중 잘 쓰이는 함수들 중 하나입니다.
 > `map`함수와 아주 비슷하게 기능합니다.
-> 함수는 주어진 시퀀스에서 각 요소를 사용해 바디 부분을 반복적으로 실행합니다.
+> 함수는 주어진 시퀀스에서 각 요소를 사용해, 본체 부분을 반복적으로 실행합니다.
 {: ng-show="block31" .description}
 
-> `doseq`함수는 인자를 묶어서 취급합니다.
-> 그 인자는 이상해 보이는 벡터일 수도 있습니다 : `[name의 시퀀스]`. 
-> 시퀀스의 각 요소가 반복하면서, 하나씩 이름에 할당됩니다.
+> `doseq` 함수는 첫번째 인자를 바인딩 벡터로 받습니다.
+> 그 인자는 이상해 보이는 벡터일 수도 있습니다 : `[name sequence]`의 형식입니다. 
+> 시퀀스의 각 요소가 반복하면서, `name`에 할당됩니다.
 {: ng-show="block32" .description}
 
 ```clojure
@@ -118,14 +118,14 @@ clojure.lang.Keyword  clojure.lang.RT.seqFrom (RT.java:528)
 <button class="link" ng-bind-html="details2" ng-model="block42" ng-click="block42=!block42"></button>
 
 >`dotimes`(**do number of times**) 함수는 시퀀스를 다루는 함수들 중 잘 쓰이는 또 다른 함수입니다.
->`doseq`함수처럼 반복적으로 주어진 바디를 실행합니다.
+>`doseq` 함수처럼 반복적으로 주어진 본체 부분을 실행합니다.
 > 차이점은 인자를 받는 방법입니다.
-> `dotimes`는 `[name의 최대정수]`를 인자로 받습니다.
+> `dotimes`의 첫번쨰 인자는 `[name max-integer]` 형식입니다.
 {: ng-show="block41" .description}
 
 
-> `dotimes` 함수는 다른 프로그래밍 언어에서 for문과 가장 유사합니다.
-> 이 함수는 `ntn`함수와 함께 주어진 시퀀스에 대한 인덱스 접근을 허용합니다.
+> `dotimes` 함수는 다른 프로그래밍 언어에서 for 문과 가장 유사합니다.
+> 이 함수는 `ntn` 함수와 조합하면, 주어진 시퀀스에 대한 인덱스 접근이 가능합니다.
 {: ng-show="block42" .description}
 
 ```clojure

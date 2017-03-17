@@ -21,7 +21,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 * 함수명 정하기
 * [보너스 섹션] 함수를 인자로 갖는 함수
     - `map`과 `reduce`
-* [보너스 섹션] 익명 함수 Anonymous function
+* [보너스 섹션] 무명 함수 Anonymous function
 * [보너스 섹션] `let`으로 로컬 바인딩하기
 </section>
 
@@ -31,7 +31,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 #### <button class="link" ng-model="block11" ng-click="block11=!block11">Intro</button>
 
-> `count`, `conj`, `first`,`rest` 같은 몇 가지 함수들을 살펴봤습니다.
+> `count`, `conj`, `first`, `rest` 같은 몇 가지 함수들을 살펴봤습니다.
 > 마찬가지로, 우리가 사용한 모든 산술 연산도 함수입니다 : `+`, `-`, `*`, `/`
 > 그렇다면 함수란 무엇일까요?
 {: ng-show="block11" .description}
@@ -52,9 +52,9 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 > * `defn`은 함수를 정의합니다.
 > * `forward-right`은 이 함수의 *이름*입니다.
-> * 다음 줄의 문자열은 함수의 기능을 설명합니다. 이는 선택사항입니다.
+> * 다음 줄의 문자열은 함수에 대한 설명입니다. 이는 선택 사항입니다.
 > * `[turtle]`은 *인자*의 리스트입니다. `turtle`이라는 한 개의 인자를 갖고 있습니다.
-> * `(forward turtle 60) (right turtle 135)` 은 함수의 *바디*입니다. 함수를 사용할 때 실행되는 부분입니다.
+> * `(forward turtle 60) (right turtle 135)` 은 함수의 *본체*입니다. 함수를 사용할 때 실행되는 부분입니다.
 {: ng-show="block21" .description}
 
 ```clojure
@@ -104,11 +104,11 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 1. 함수 작성하기
   * `walk.clj`로 이동합니다.
   * 편집기에서, 슬라이드에 있는 `forward-right` 함수를 작성합니다. (아래쪽)
-  * (선택) `walk.clj`를 저장합니다.
+  * (선택 사항) `walk.clj`를 저장합니다.
   * `forward-right` 함수 전체를 선택하고 Eval Selection을 누릅니다.
 2. 함수 사용하기
-  * REPL 창 오른쪽에 `(forward-right :trinity)`를 입력합니다.
-  * 위를 최소 8번 반복합니다.(위 화살표와 엔터를 사용하세요.)
+  * 우측의 REPL 창에 `(forward-right :trinity)`를 입력합니다.
+  * 위의 입력을 최소 8번 반복합니다.(위 화살표와 엔터를 사용하세요.)
 
 ```clojure
 (defn forward-right
@@ -127,7 +127,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 * 편집기에서, 3개의 인자를 갖는(turtle, len, and angle) `forward-right-with-len-ang` 함수를 작성합니다.(`forward-right-with-len`의 확장판)
 * `forward-right-with-len-ang` 함수 전체를 선택하고 Reload Selection을 누릅니다.
 * REPL 창에서, `(forward-right-with-len-ang :trinity 60 120)`를 씁니다.
-* REPL에서 함수를 계산하면서 여러 번 반복합니다.
+* REPL에서 함수를 평가하면서 여러 번 반복합니다.
 
 </section>
 
@@ -141,26 +141,26 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 > 함수명은 심볼입니다. 값에 이름을 할당할 때 `def`와 함께 사용했던 심볼들처럼 말이죠.
 {: ng-show="block61" .description}
 
-> 숫자가 아닌 문자로 시작해야합니다.
+> 숫자가 아닌 문자로 시작해야 합니다.
 >  *, +, !, -, _, ?와 함께 영숫자 문자를 포함할 수 있습니다.
-> 이러한 유연성은 우리가 사용하는 특정 관용구가 있기 때문에 함수에서 중요합니다.
+> 이러한 유연성은, 우리가 함수명에 사용하는 관례와 관련되기 떄문에 함수에서 중요합니다.
 {: ng-show="block61" .description}
 
 #### 함수의 두 가지 유형 <button class="link" ng-bind-html="details" ng-model="block62" ng-click="block62=!block62"></button>
 
 > 클로저는 두 가지 유형의 함수가 있습니다:
 > 1. 값을 반환하는 함수,
-> 2. 참거짓을 반환하는 함수.
-> 두 번째 유형의 함수를 *조건자*라고 합니다.
+> 2. 참/거짓을 반환하는 함수.
+> 두 번째 유형의 함수를 *진위 함수(predicate)*라고 합니다.
 {: ng-show="block62" .description}
 
 
-##### 조건자 함수 예제 <button class="link" ng-bind-html="details" ng-model="block63" ng-click="block63=!block63"></button>
+##### 진위 함수 예제 <button class="link" ng-bind-html="details" ng-model="block63" ng-click="block63=!block63"></button>
 
-> 클로저에서, `=`는 놀랍게도 조건자 함수입니다.
+> 클로저에서, `=`는 놀랍게도 진위 함수입니다.
 > 그 외에도, 다른 많은 컴퓨터 언어들처럼
-> 클로저는 크기 비교를 위한 조건자 함수를 갖고 있습니다.
-> 대부분의 조건자 함수는 `?`로 끝납니다.
+> 클로저는 크기 비교를 위한 진위 함수를 갖고 있습니다.
+> 대부분의 진위 함수는 `?`로 끝납니다.
 {: ng-show="block63" .description}
 
 > * `=`, `not=`
@@ -178,10 +178,10 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 #### <button class="link" ng-model="block71" ng-click="block71=!block71">Intro</button>
 
 > 컬렉션과 함께 사용할 수 있는 가장 강력한 함수들 중 몇몇은
-> 다름 함수를 인자로 가질 수 있습니다.
-> 클로저의 가장 마법같은 부분입니다. --다른 많은 프로그래밍 언어들도 그러하지만
-> 복잡한 아이디어라 처음에 이해가 안 갈 수 있습니다.
-> 예제를 보고 더 공부해봅시다.
+> 함수의 인자로 다른 함수가 올 수 있습니다.
+> 클로저의 가장 마법같은 부분입니다. --다른 많은 프로그래밍 언어들도 그러하지만,
+> 익숙하지 않은 개념이라 처음에는 이해가 안 갈 수 있습니다.
+> 예제를 보고 더 공부해 봅시다.
 {: ng-show="block71" .description}
 
 > 참고: [Higher-order Function](http://clojurebridge.github.io/community-docs/docs/clojure/higher-order-function/)
@@ -193,9 +193,9 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 
 #### <button class="link" ng-bind-html="details" ng-model="block101" ng-click="block101=!block101"></button>
 
-> `map`은 컬렉션과 함께 다른 함수를 인자로 취합니다.
-> 컬렉션의 각 멤버에서 제공된 함수를 호출합니다.
-> 그런 다음 해당 함수 호출의 결과와 함께 새로운 컬렉션을 반환합니다.
+> `map`은 인자로, 다른 함수와 컬렉션을 받습니다.
+> 컬렉션의 각 요소들을 대상으로 인자로 주어진 함수를 호출합니다.
+> 그런 다음 해당 함수 호출의 결과를 담은 새로운 컬렉션을 반환합니다.
 > 생소한 개념이지만, 일반적인 함수형 프로그래밍과 클로저의 핵심입니다.
 {: ng-show="block101" .description}
 
@@ -217,8 +217,8 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 > `reduce`함수가 있습니다. 컬렉션을 단일 값으로 변환할 때 사용합니다.
 {: ng-show="block111" .description}
 
-> `reduce`함수는 제공된 컬렉션의 처음 두 멤버를 받고 그 멤버들에게 제공된 함수를 호출합니다.
-> 그 다음, 제공된 함수를 다시 한번 호출 합니다.--이번에는 다음 컬렉션 멤버와 함께 이전 함수 호출의 결과를 이용합니다.
+> `reduce`함수는, '두번째 인자로 제공된 컬렉션'에서 처음 두 요소를 취한 후, '첫번째 인자로 제공된 함수'에 그 요소들을 인자로 주어 호출합니다.
+>  그 후에도 '인자로 주어진 함수'를 계속해서 호출 하는데, 이제부터는 이 함수의 인자로 '이전 함수 호출의 결과'와 '컬렉션의 다음 요소'를 취합니다.
 > `reduce`함수는 이 과정을 컬렉션의 끝에 도달할 때 까지 반복하고 반복합니다.
 {: ng-show="block111" .description}
 
@@ -243,15 +243,15 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 <section ng-controller="NarrativeController">
 #### [보너스 섹션]
 
-### 익명 함수 Anonymous functions
+### 무명 함수 Anonymous functions
 
 #### 이름이 없는 함수 <button class="link" ng-bind-html="details" ng-model="block201" ng-click="block201=!block201"></button>
 
-> 여태껏, 봐왔던 모든 함수들은 이름을 갖고 있었습니다. `+`, `str`, `reduce`처럼 말이죠.
+> 여태껏 봐왔던 모든 함수들은 이름을 갖고 있었습니다. `+`, `str`, `reduce`처럼 말이죠.
 > 하지만, 함수는 이름이 꼭 필요하지는 않습니다.
-> 값이 이름을 가질 필요 없듯이요.
-> 이렇게 이름이 없는 함수를 *익명 함수*라고 합니다.
-> 익명 함수는 `fn`으로 생성됩니다. 이렇게 말이죠:
+> 값이 이름을 가질 필요가 없듯이요.
+> 이렇게 이름이 없는 함수를 *무명 함수*라고 합니다.
+> 무명 함수는 `fn`으로 생성됩니다. 이렇게 말이죠:
 {: ng-show="block201" .description}
 
 > 참고: [Anonymous Function](http://clojurebridge.github.io/community-docs/docs/clojure/anonymous-function/)
@@ -262,12 +262,12 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 (fn [s1 s2] (str s1 " " s2))
 ```
 
-#### 익명 함수가 아닌 경우 <button class="link" ng-bind-html="details" ng-model="block202" ng-click="block202=!block202"></button>
+#### 무명 함수가 아닌 경우 <button class="link" ng-bind-html="details" ng-model="block202" ng-click="block202=!block202"></button>
 
-> 진도 나가기 전에, 함수명은 _항상_ 자유롭게 지을 수 있다는 걸 이해해야합니다.
-> 이름을 짓는 것엔 아무 문제가 없습니다.
-> 하지만, 익명 함수로 이루어진 클로저 코드를 _앞으로_ 볼 것입니다.
-> 때문에 익명 함수를 알고 있어야 합니다.
+> 진도 나가기 전에, 함수명은 _항상_ 자유롭게 지을 수 있다는 걸 이해해야 합니다.
+> 그렇게 하는 것이 잘못된 것은 아닙니다.
+> 하지만, 무명 함수로 이루어진 클로저 코드를 _앞으로_ 볼 것입니다.
+> 때문에 무명 함수를 알고 있어야 합니다.
 {: ng-show="block202" .description}
 
 ```clojure
@@ -278,12 +278,12 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 </section>
 
 <section ng-controller="NarrativeController">
-#### 익명 함수 사용 예제 <button class="link" ng-bind-html="details" ng-model="block203" ng-click="block203=!block203"></button>
+#### 무명 함수 사용 예제 <button class="link" ng-bind-html="details" ng-model="block203" ng-click="block203=!block203"></button>
 
-> 왜 익명 함수를 쓸까요?
-> 익명 함수는 꽤나 유용합니다.
-> 바로 함수 섹션에서 배운 `map`이나 `reduce`같은 함수들처럼 다른 함수를 인자로 갖는 함수를 가질 때 말입니다.
-> 익명 함수의 사용 예제를 살펴봅시다.
+> 왜 무명 함수를 쓸까요?
+> 무명 함수는 꽤나 유용합니다.
+> 바로 함수 섹션에서 배운 `map`이나 `reduce`같은 함수들처럼, 다른 함수를 인자로 갖는 함수를 가질 때 말입니다.
+> 무명 함수의 사용 예제를 살펴봅시다.
 {: ng-show="block203" .description}
 
 ```clojure
@@ -307,7 +307,7 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 #### <button class="link" ng-model="block301" ng-click="block301=!block301">Intro</button>
 
 > 함수를 만들 때, 코드를 읽기 쉽게 하거나 값을 다시 사용하기 위해 값에 이름을 할당하고 싶을 수 있습니다.
-> 하지만 함수 안에서는 함수 밖처럼 `def`을 사용해서는 _안됩니다_.
+> 하지만 함수 안에서는 함수 밖에서처럼 `def`을 사용해서는 _안됩니다_.
 > 대신에 `let`이라고 불리는 특별한 양식을 사용해야합니다.
 {: ng-show="block301" .description}
 </section>
@@ -345,19 +345,19 @@ http://clojurebridge.github.io/curriculum/outline/functions.html
 > 먼저, 함수의 이름과 함수를 설명하는 문자열과 인자를 갖고 있습니다. 다른 함수들과 같죠.
 {: ng-show="block311" .description}
 
-> 다음엔, `let`이 보입니다. `let`은 이름과 값이 번갈아 나오는 벡터를 받습니다.
-> `t1`이 이름이고,`(이름)`의 결과를 `t1`에 할당합니다.
-> 또 `(성)`의 결과를 `t2`에 할당합니다.
+> 다음엔, `let`이 보입니다. `let`은 이름과 값이 번갈아 나오는 벡터를 첫 인자로 받습니다.
+> `t1`이 이름이고,`(first names)`의 결과를 `t1`에 할당합니다.
+> 또 `(last names)`의 결과를 `t2`에 할당합니다.
 {: ng-show="block312" .description}
 
-> 이름과 값의 벡터 다음에, `let`함수의 바디가 있습니다.
-> 여타 함수의 바디처럼 실행하고 값을 반환합니다.
+> 이름과 값의 벡터 다음에, `let` 함수의 본체가 나옵니다.
+> 여타 함수의 본체처럼 실행하고 값을 반환합니다.
 > `let`안에 `t1`과 `t2`가 정의되어있습니다.
 {: ng-show="block313" .description}
 
-> `walk.clj`로 이동해서 `opposite`함수를 작성합니다.
-> 그런 다음, 함수 정의의 마지막 줄에서 `opposite`함수를 평가해봅니다.
-> 또한, `opposite`함수의 사용 예제를 평가해봅니다.
+> `walk.clj`로 이동해서 `opposite` 함수를 작성합니다.
+> 그런 다음, 함수 정의의 마지막 줄에서 `opposite` 함수를 평가해봅 니다.
+> 또한, `opposite` 함수의 사용 예제를 평가해 봅니다.
 {: ng-show="block314" .description}
 
 ```clojure

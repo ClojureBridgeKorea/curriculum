@@ -19,7 +19,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 
 * 왜 클로저인가?
 * 클로저의 장점은?
-* 클로저는 어떻게 생겼을까?
+* 클로저 코드의 모습은 어떻게 생겼을까?
     - 주석
 * REPL이란?
 * 실전에서의 REPL
@@ -41,9 +41,9 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 > 마찬가지로 이 때문에 클로저는 기존 프로그래머가 추가로 배우기 쉬운 언어이기도 합니다.
 {: ng-show="block11" .description}
 
-#### 클로저는 간결하다 <button class="link" ng-bind-html="details" ng-model="block12" ng-click="block12=!block12"></button>
+#### 클로저는 단순하다 <button class="link" ng-bind-html="details" ng-model="block12" ng-click="block12=!block12"></button>
 
-> 클로저는 간결합니다. 강력하지 않다고 말하는 것이 아닙니다. 클로저는 강력합니다.
+> 클로저는 단순합니다. 강력하지 않다고 말하는 것이 아닙니다. 클로저는 강력합니다.
 > 클로저 프로그래밍을 위해 배워야 하는 개념들은 그 숫자가 매우 적습니다. 그러면서도 이해하기는 수월합니다.
 > 여러분이 클로저를 익혀 나갈 수록, 클로저 언어의 작은 일부분만 갖고도 생산적인 일을 할 수 있게 됩니다.
 {: ng-show="block12" .description}
@@ -76,7 +76,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 #### 데이터 처리 <button class="link" ng-bind-html="details" ng-model="block22" ng-click="block22=!block22"></button>
 
 > 클로저는 데이터 처리에 좋다고 알려져 있습니다. 왜냐하면 클로저가 좋은 자료 구조를 가지고 있기 때문입니다.
-> 달리 말하면, 클로저는 데이터를 표현하는 사용이 쉽고 강력한 여러가지 방법들을 내장하고 있습니다.
+> 달리 말하면, 클로저는 데이터를 표현하는, 사용이 쉽고 강력한 여러가지 방법들을 내장하고 있습니다.
 {: ng-show="block22" .description}
 
 #### 동시성 <button class="link" ng-bind-html="details" ng-model="block23" ng-click="block23=!block23"></button>
@@ -85,7 +85,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 > 네 사람이 한 번에 한 단계씩 끝내도록 작성하는 대신, 각자가 일을 부분적으로 나누어 맡도록 합니다.
 > 그 다음, 네 사람은 자신의 작업물을 적절한 시점에 합쳐 더 큰 작업물로 만듭니다.
 > 이 과정을 계속해서 반복합니다. 모든 작업물들이 다 합쳐져 완성될 때까지 말입니다.
-> 이 과정은 정말 복잡해서 글로 작성하기 어렵습니다. 읽는 것도 힘들겁니다.
+> 이 과정은 정말 복잡해서 제대로 작성하기 어렵습니다. 읽는 것도 힘들 겁니다.
 > 클로저는 컴퓨터에게 내리는 이런 종류의 명령을 쉽게 작성하는 방법을 제공합니다.
 {: ng-show="block23" .description}
 
@@ -97,7 +97,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 </section>
 
 <section ng-controller="NarrativeController">
-## 클로저는 어떻게 생겼나?
+## 클로저 코드의 모습은 어떻게 생겼을까?
 {: .slide_title .slide}
 
 ```clojure
@@ -110,16 +110,16 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 
 > 괄호를 주목하세요. 클로저에서 괄호는 명령문을 묶습니다.
 > 여는 괄호는 명령문의 시작이고, 짝이 맞는 닫는 괄호는 명령문의 끝입니다.
-> 보통, 클로저 코드는 중첩 괄호를 많이 가집니다.
-> 혹은 다른 말로, 중첩 닫힌 명령문을 많이 가집니다.
+> 보통, 클로저 코드에는 중첩된 괄호가 많습니다.
+> 혹은 다른 말로, 중첩해서 명령문을 감싸는 코드가 많습니다.
 {: ng-show="block31" .description}
 
 #### 함수  <button class="link" ng-bind-html="details" ng-model="block32" ng-click="block32=!block32"></button>
 
-> 괄호 옆에 나오는 컴퓨터에 주는 명령문을 볼 수 있습니다
-> 그 명령문을 보통 우리는 함수라고 합니다. 클로저에서는 함수가 온갖 일들을 다 합니다.
+> 괄호 다음에는 컴퓨터에 주는 명령이 보입니다.
+> 그 명령을 보통 우리는 함수라고 합니다. 클로저에서는 함수가 온갖 일들을 다 합니다.
 > `print-str`, `+` 그리고 `forward` 이것들 모두가 함수입니다.
-> 이러한 함수들이 실행되면, 어떠한 타입의 값을 반환합니다.
+> 이러한 함수들이 실행되면, 특정한 타입의 값을 반환합니다.
 > 클로저 함수는 항상 값을 반환합니다.
 {: ng-show="block32" .description}
 
@@ -140,9 +140,9 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 
 > 코드를 작성할 때, 우리는 가능한 한 명확하게 쓰려고 노력합니다.
 > 이런 노력은 대부분 우리보다는 다른 사람들이 코드를 읽을 때 큰 도움이 됩니다.
-> 혹은 우리가 나중에 정확한 상세의미를 잊기 쉬운 지점의 코드를 다시 읽을 때에도 큰 도움이 됩니다.
+> 혹은 우리가 나중에 정확한 상세한 의미를 잊기 쉬운 지점의 코드를 다시 읽을 때에도 큰 도움이 됩니다.
 > 코드의 의미를 명확히 밝히는 한 가지 방법이 주석을 다는 것입니다.
-> 주석은 우리 자신을 위하여 우리가 코드에 추가하는 메모입니다. 컴퓨터는 주석을 무시합니다.
+> 주석은 우리 자신을 위하여 코드에 추가하는 메모입니다. 컴퓨터는 주석 부분을 무시합니다.
 {: ng-show="block41" .description}
 
 > 클로저에서는, 주석이 세미콜론(;)으로 시작합니다.
@@ -167,7 +167,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 
 #### <button class="link" ng-model="block51" ng-click="block51=!block51">Intro</button>
 
-> "REPL"은 Read-Eval-Print-Loop"(읽기-평가-출력-반복)를 나타내는데, 맥락없이는 제대로 이해되지 않을겁니다.
+> "REPL"은 Read-Eval-Print-Loop"(읽기-평가-출력-반복)를 나타내는데, 구체적인 예를 보지 않고는 제대로 이해되지 않을겁니다.
 > 클로저를 포함한 많은 프로그래밍 언어들은 대화식으로 코드를 실행하여 사용자가 즉각적인 피드백을 받는 방식을 취합니다.
 > 달리 말하면, 코드가 읽히고, 그리고나서 평가되고, 그리고나서 결과가 출력되고, 
 > 그리고 다시 사용자의 차례가 됩니다. 따라서 반복인 것이죠.
@@ -186,8 +186,8 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 
 #### Nightcode InstaREPL <button class="link" ng-bind-html="details" ng-model="block61" ng-click="block61=!block61"></button>
 
-> 클로저와 상호작용하려면, Nightcode의 InstaREPL 기능을 쓸 수 있습니다.
-> 클로저와 상호작용할 수 있는 멋진 방법이죠.
+> 클로저와 대화식으로 프로그래밍하려면, Nightcode의 InstaREPL 기능을 쓸 수 있습니다.
+> 클로저와 대화식으로 프로그래밍할 수 있는 멋진 방법이죠.
 {: ng-show="block61" .description}
 
 
@@ -206,7 +206,7 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 #### 프로그램 평가 및 줄 단위 평가 <button class="link" ng-bind-html="details" ng-model="block63" ng-click="block63=!block63"></button>
 
 <!-- TODO project_name should probably be defined somewhere, right? -->
-> Nightcode는 하나의 파일 전체 내지는 하나의 프로그램 전체로 또는 줄 단위로도 평가하게 해줍니다.
+> Nightcode는 하나의 파일 전체 내지는 하나의 프로그램 전체 또는 줄 단위로도 평가하게 해줍니다.
 > Nightcode에서, REPL이 시작된 후, "Realod File" 과 "Reload Selection"이 작동합니다.
 {: ng-show="block63" .description}
 </section>
@@ -248,20 +248,20 @@ http://clojurebridge.github.io/curriculum/outline/intro.html
 
 (연습문제 2가 끝났다는 가정 하에)
 
-* `(right 90)`을 쓰고 REPL 창 하단의 "enter"를 누릅니다![Run with REPL pane](img/run-with-repl.png)
+* `(right 90)`을 쓰고 REPL 창에서 "enter"를 누릅니다![Run with REPL pane](img/run-with-repl.png)
 * 거북이가 어떻게 되는지 확인합니다.
 * 이 둘을 살펴보고 [Turtles App API](https://github.com/ClojureBridge/welcometoclojurebridge/blob/master/outline/TURTLE.md)와
 [How To Walk Turtles](https://github.com/ClojureBridgeSeoul/welcometoclojurebridge/blob/master/outline/TURTLE-SAMPLES.md)
-[section 1 and 2], 거북이를 움직이게 할 명령어를 시도해봅니다.
+[section 1 and 2], 거북이를 움직이게 할 명령어를 시도해 봅니다.
 </section>
 
 <section>
 #### 연습문제 4: 클로저 설명서 살펴보기
 
-* REPL창 아래에, 사용한 함수에 대한 설명서를 살펴봅니다.
+* REPL창 아래에서, 사용한 함수에 대한 설명서를 살펴봅니다.
 * `(doc function-name)` 명령어를 쓸 수도 있습니다.
-* `(doc +)`와 `(doc forward)`를 REPL에서 사용해봅니다.
-* `-`, `*`, 또는 `doc`와 같은 여태껏 써왔던 다른 함수들을 사용해봅니다.
+* `(doc +)`와 `(doc forward)`를 REPL에서 사용해 봅니다.
+* `-`, `*`, 또는 `doc`와 같은 여태껏 써왔던 다른 함수들을 사용해 봅니다.
 </section>
 
 {% comment %}
