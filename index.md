@@ -10,6 +10,7 @@ permalink: /index.html
 <section>
 클로저브릿지
 ======================
+<a href="https://github.com/ClojureBridgeSeoul/curriculum">github에서보기</a>
 {: .slide-title .intro}
 </section>
 
@@ -46,4 +47,6 @@ Please look at [README.md](README.md) instead. :green_heart: :blue_heart:
     - [Global Growth](https://github.com/ClojureBridge/global-growth)  (웹 어플리케이션,Rest API)
     - [Caesar Cipher](http://clojurebridge.github.io/community-docs/docs/exercises/caesar-cipher/)
           (문자,문자열 연습하기)
+
+* 깃헙에서 번역 기여하기 <a href="https://github.com/ClojureBridgeSeoul/curriculum">curriculum</a>
 </section>
