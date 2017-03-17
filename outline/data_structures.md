@@ -27,7 +27,7 @@ http://clojurebridge.github.io/curriculum/outline/data_structures.html
 
 #### <button class="link" ng-model="block11" ng-click="block11=!block11">Intro</button>
 
-> 지금까지sms 데이터 하나하나만을 다뤘습니다: 숫자, 문자열, 값.  프로그래밍시에는 데이터들의 묶음, 즉 `콜렉션`을 가지고 작업하는 경우가 더 많습니다.
+> 지금까지는 데이터 하나하나만을 다뤘습니다: 숫자, 문자열, 값.  프로그래밍시에는 데이터들의 묶음, 즉 `콜렉션`을 가지고 작업하는 경우가 더 많습니다.
 {: ng-show="block11" .description}
 
 > 클로저는 이런 *collections*와 함께 작업할 수 있는 훌륭한 기능들을 갖추고 있습니다. 클로저는 네 가지의 collections을 제공할 뿐만 아니라, 이 모든 collection들을 함께 사용하는 일관된 방법을 제공합니다.
